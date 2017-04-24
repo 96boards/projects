@@ -15,7 +15,7 @@ Link to blog: http://www.96boards.org/blog/96boards-vu-meter-part-1/
 
 ### Hardware required:
 
-1. HiKey development board
+1. [HiKey development board](http://www.96boards.org/product/hikey/)
 2. USB mic
 
 ### Package dependencies:
