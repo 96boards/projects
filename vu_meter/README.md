@@ -24,10 +24,11 @@ Link to blog: http://www.96boards.org/blog/96boards-vu-meter-part-1/
 
 ### Building and Running:
 
-1. Clone the repository
-2. cd vu_meter
-3. make
-4. ./bin plughw:U0x46d0x825
+``` shell
+$ cd vu_meter
+$ make
+$ ./bin plughw:U0x46d0x825
+```
 
 Replace the Sound card info according to your device
 
