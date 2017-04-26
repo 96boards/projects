@@ -10,7 +10,7 @@ This repository contains projects made out of _CE, EE, and IE_ boards of 96Board
 
 ## Contributing
 
-See the [Contribution](CONTRIBUTING.md) documentation for more details.
+See the [Contribute](CONTRIBUTE.md) documentation for more details.
 
 ## License
 
