@@ -28,17 +28,17 @@ void print_accel()
         /* get acceleration from sensor */
         accel->getAcceleration(&ax, &ay, &az);
 
-        /* get x aceleration */
+        /* display x aceleration */
         lcd->setCursor(1,0);
         snprintf(buffer, sizeof(buffer), "%f", ax);
         lcd->write(buffer);
 
-        /* get y acceleration */
+        /* display y acceleration */
         lcd->setCursor(1,6);
         snprintf(buffer, sizeof(buffer), "%f", ay);
         lcd->write(buffer);
 
-        /* get z acceleration */
+        /* display z acceleration */
         lcd->setCursor(1,12);
         snprintf(buffer, sizeof(buffer), "%f", az);
         lcd->write(buffer);
