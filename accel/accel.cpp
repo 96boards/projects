@@ -1,4 +1,12 @@
-/* Accelerometer example 
+ 
+/*
+ * Author: Manivannan Sadhasivam
+ * Copyright (c) 2017 Linaro Inc.
+ * All rights reserved.
+ *
+ ************************************************************************************
+ *
+ * Accelerometer example 
  * 
  * I2C0--> Lcd
  * I2C1--> Accelerometer
@@ -72,7 +80,7 @@ int main(void)
 	/* place device into active mode */
 	accel->setModeActive();
 
-	/* bleed blue */
+	/* set background color as blue and display x, y z */
 	lcd->setColor(0x00, 0x00, 0xff);
 	lcd->setCursor(0,0);
 	lcd->write("X:");
@@ -91,11 +99,13 @@ int main(void)
 	        if (accel->tiltTap())
                 	lcd->setColor(0x00, 0xff, 0x00);
 	
+		/* print acceleration readings */
 		print_accel();
 	
 		/* sleep for 0.5s */
 		usleep(500000);
 
+		/* default to blue */
 		lcd->setColor(0x00, 0x00, 0xff);
 	}
 	return 0;
