@@ -16,5 +16,5 @@ See the [Contribute](CONTRIBUTE.md) documentation for more details.
 
 Unless otherwise specified, everything in this repository is covered by the following licence:
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
