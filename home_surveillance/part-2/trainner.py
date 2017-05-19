@@ -1,4 +1,4 @@
-# trainner.py - Create trainner model by using dataset
+# trainner.py - Create trainner model using dataset
 # Author - Manivannan Sadhasivam
 #
 ################################################################
