@@ -18,4 +18,4 @@ Install OpenCV on 96Boards and implement face detection using it. Script should 
 and unknown faces.
 
 * [Link to Blog]()
-* [Link to Project]()
+* [Link to Project](part-2)
