@@ -66,5 +66,5 @@ while True:
         break
 
 # Do cleanup
-cam.release()
+cap.release()
 cv2.destroyAllWindows()
