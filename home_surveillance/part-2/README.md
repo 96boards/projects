@@ -30,8 +30,8 @@ $ sudo python dataset.py
 ### Training the dataset
 
 ```shell
-$ mkdir trainner
-$ sudo python trainner.py
+$ mkdir trainer
+$ sudo python trainer.py
 ```
 
 ### Implement face detection
