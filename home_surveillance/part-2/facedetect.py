@@ -10,8 +10,8 @@ import numpy as np
 # Create Local Binary Patterns Histograms (LBPH) recognizer
 recognizer = cv2.face.createLBPHFaceRecognizer()
 
-# Load the trainner
-recognizer.load('trainner/trainner.yml')
+# Load the trainer
+recognizer.load('trainer/trainer.yml')
 
 # Load the classifier
 faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
