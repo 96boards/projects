@@ -1,4 +1,4 @@
-# trainner.py - Create trainner model using dataset
+# trainer.py - Create trainer model using dataset
 # Author - Manivannan Sadhasivam
 #
 ################################################################
@@ -57,5 +57,5 @@ faces,Ids = getImagesAndLabels('dataset')
 # Train the recognizer for detected faces
 recognizer.train(faces, np.array(Ids))
 
-# Save the recognizer out in trainner.yml
-recognizer.save('trainner/trainner.yml')
+# Save the recognizer out in trainer.yml
+recognizer.save('trainer/trainer.yml')
