@@ -1,4 +1,12 @@
-/* Accelerometer example 
+ 
+/*
+ * Author: Manivannan Sadhasivam
+ * Copyright (c) 2017 Linaro Inc.
+ * All rights reserved.
+ *
+ ************************************************************************************
+ *
+ * Accelerometer example 
  * 
  * I2C0--> Lcd
  * I2C1--> Accelerometer
@@ -28,17 +36,17 @@ void print_accel()
         /* get acceleration from sensor */
         accel->getAcceleration(&ax, &ay, &az);
 
-        /* get x aceleration */
+        /* display x aceleration */
         lcd->setCursor(1,0);
         snprintf(buffer, sizeof(buffer), "%f", ax);
         lcd->write(buffer);
 
-        /* get y acceleration */
+        /* display y acceleration */
         lcd->setCursor(1,6);
         snprintf(buffer, sizeof(buffer), "%f", ay);
         lcd->write(buffer);
 
-        /* get z acceleration */
+        /* display z acceleration */
         lcd->setCursor(1,12);
         snprintf(buffer, sizeof(buffer), "%f", az);
         lcd->write(buffer);
@@ -46,33 +54,33 @@ void print_accel()
 
 int main(void)
 {
-	int count;
-	uint8_t reg;
+	uint8_t val;
 	float ax, ay, az;
 	char buffer[5];
 
 	lcd = new upm::Jhd1313m1(I2C_LCD_BUS, LCD_ADDR, RGB_ADDR);
 	accel = new MMA7660(I2C_ACCEL_BUS, ACCEL_ADDR);
 
-	/* place device in standby mode so we can write registers */
-	accel->setModeStandby();
+        /* place device in standby mode so we can write registers */
+        accel->setModeStandby();
 
-	/* enable 64 samples per second */
-	accel->setSampleRate(MMA7660::AUTOSLEEP_64);
+        /* disable sleep count */
+        accel->writeByte(MMA7660::REG_SPCNT, 0x00);
 
-	/* setup SR register */
-	accel->writeByte(MMA7660::REG_SR, 0x00);
-	
-	/* setup tap threshold */
-	accel->writeByte(MMA7660::REG_PDET, 0x44);
+        /* setup tap threshold */
+        accel->writeByte(MMA7660::REG_PDET, 0x6C);
 
-	/* setup tap debounce */
-	accel->writeByte(MMA7660::REG_PD, 0x02);
+        /* setup SR register */
+        accel->writeByte(MMA7660::REG_SR, 0x00);
 
-	/* place device into active mode */
-	accel->setModeActive();
+        /* setup tap debounce */
+        accel->writeByte(MMA7660::REG_PD, 0x08);
 
-	/* bleed blue */
+        /* place device into active mode */
+        accel->setModeActive();
+
+
+	/* set background color as blue and display x, y z */
 	lcd->setColor(0x00, 0x00, 0xff);
 	lcd->setCursor(0,0);
 	lcd->write("X:");
@@ -83,19 +91,22 @@ int main(void)
 
 
 	while(1) {
-		/* change color to red if shake is detected*/
-		if (accel->tiltShake())
-			lcd->setColor(0xff, 0x00, 0x00);
-
-		/* change color to green if tap is detected*/
-	        if (accel->tiltTap())
-                	lcd->setColor(0x00, 0xff, 0x00);
+                val = accel->readByte(MMA7660::REG_TILT);
+                if (val & 0x80) {
+                        /* change color to Red if shake is detected */
+                        lcd->setColor(0xff, 0x00, 0x00);
+		} else if (val & 0x20) {
+                        /* change color to Green if tap is detected */
+                        lcd->setColor(0x00, 0xff, 0x00);
+		}
 	
+		/* print acceleration readings */
 		print_accel();
 	
 		/* sleep for 0.5s */
 		usleep(500000);
 
+		/* default to blue */
 		lcd->setColor(0x00, 0x00, 0xff);
 	}
 	return 0;

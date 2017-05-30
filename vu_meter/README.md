@@ -25,6 +25,8 @@ Link to blog: http://www.96boards.org/blog/96boards-vu-meter-part-1/
 ### Building and Running:
 
 ``` shell
+$ git clone https://github.com/96boards/projects.git
+$ cd projects
 $ cd vu_meter
 $ make
 $ ./bin plughw:U0x46d0x825
