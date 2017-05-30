@@ -7,12 +7,12 @@ to acheive facial recognition:
 * Train the dataset
 * Implement face detection
 
-### Hardware requirements:
+### Hardware requirements
 
-* 96Boards
+* Dragonboard410C
 * USB Webcam
 
-### Software dependencies:
+### Software dependencies
 
 ``` shell
 $ sudo apt-get install build-essential cmake pkg-config libjpeg-dev libtiff5-dev \
@@ -40,4 +40,4 @@ $ sudo python trainner.py
 $ sudo python facedetect.py
 ```
 
-* [Link to Blog]()
+* [Link to Blog](http://www.96boards.org/blog/part-2-home-surveillance-project-96boards/)
