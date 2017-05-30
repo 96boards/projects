@@ -15,6 +15,7 @@ detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # Prompt for person name
 id = raw_input('Enter person ID: ')
 count = 0
+max_count = 20
 
 while(True):
 
@@ -47,8 +48,8 @@ while(True):
     if cv2.waitKey(100) & 0xFF == ord('q'):
         break
 
-    # Break if count value exceeds 10
-    elif count > 10:
+    # Break if count value exceeds 20
+    elif count > max_count:
         break
  
 # Do cleanup
