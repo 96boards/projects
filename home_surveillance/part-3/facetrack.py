@@ -1,4 +1,4 @@
-# facedetect.py - Implement face detection using trainned models
+# facetrack.py - Track the known face using Webcam mounted using servo
 # Author - Manivannan Sadhasivam
 #
 ################################################################
@@ -6,12 +6,16 @@
 # Import libraries
 import cv2
 import numpy as np
+import serial
+import struct
+
+ser = serial.Serial('/dev/tty96B0',9600)
 
 # Create Local Binary Patterns Histograms (LBPH) recognizer
 recognizer = cv2.face.createLBPHFaceRecognizer()
 
-# Load the trainer
-recognizer.load('trainer/trainer.yml')
+# Load the trainner
+recognizer.load('trainner/trainner.yml')
 
 # Load the classifier
 faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
@@ -37,24 +41,35 @@ while True:
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
     # Detect objects of different sizes
-    faces=faceCascade.detectMultiScale(gray, 1.2,5)
+    faces = faceCascade.detectMultiScale(gray, 1.2,5)
 
     for(x,y,w,h) in faces:
 	
-    	# Draw rectangle at the face
+	# Draw rectangle at the face
         cv2.rectangle(frame,(x,y),(x+w,y+h),(225,0,0),2)
 
-    	# Identify the face
+	# Identify the face
         Id, conf = recognizer.predict(gray[y:y+h,x:x+w])
        
-	# Match the ID with person name
 	if(conf<50):
-            if(Id == 1):
+            if(Id==1):
+
+		# Track the identified face
                 Id="Mani"
-            else:
-                Id="Unknown"
+
+		# Send x axis info to arduino as msb followed by lsb
+		lsb = (x) & 0xff
+		msb = ((x) >> 8) & 0xff;
+		ser.write(struct.pack('>B', msb))
+		ser.write(struct.pack('>B', lsb))
+
+		# Send y axis info to arduino as msb followed by lsb
+                lsb = (y) & 0xff
+                msb = ((y) >> 8) & 0xff;
+                ser.write(struct.pack('>B', msb))
+                ser.write(struct.pack('>B', lsb))
         else:
-            Id = "Unknown"
+            Id="Unknown"
 
 	# Print name of the identified face
         cv2.putText(frame,str(Id), (x,y+h), fontFace, fontScale, fontColor)
