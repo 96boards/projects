@@ -29,6 +29,12 @@ Open facetrack.ino using Arduino IDE and upload the code to Sensor Mezzanine wit
 ### Webcam Tracking
 
 ``` shell
+$ git clone https://github.com/96boards/projects.git
+$ cd projects/home-surveillance/part-3
+```
+Place the trained dataset and haarcascade_frontalface_default.xml to this directory
+
+```shell
 $ sudo python facetrack.py
 ```
 
