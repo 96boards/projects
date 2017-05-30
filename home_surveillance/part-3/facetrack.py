@@ -15,7 +15,7 @@ ser = serial.Serial('/dev/tty96B0',9600)
 recognizer = cv2.face.createLBPHFaceRecognizer()
 
 # Load the trainner
-recognizer.load('trainner/trainner.yml')
+recognizer.load('trainer/trainer.yml')
 
 # Load the classifier
 faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
