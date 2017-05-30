@@ -9,7 +9,7 @@ import numpy as np
 import serial
 import struct
 
-ser = serial.Serial('/dev/ttyACM0',9600)
+ser = serial.Serial('/dev/tty96B0',9600)
 
 # Create Local Binary Patterns Histograms (LBPH) recognizer
 recognizer = cv2.face.createLBPHFaceRecognizer()
