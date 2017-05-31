@@ -15,7 +15,7 @@ s3 = boto3.resource('s3')
 recognizer = cv2.face.createLBPHFaceRecognizer()
 
 # Load the trainner
-recognizer.load('trainner/trainner.yml')
+recognizer.load('trainer/trainer.yml')
 
 # Load the classifier
 faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
