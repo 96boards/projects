@@ -38,5 +38,5 @@ Place the trained dataset and haarcascade_frontalface_default.xml to this direct
 $ sudo python facetrack.py
 ```
 
-[Link to Blog]()
+[Link to Blog](http://www.96boards.org/blog/part-3-home-surveillance-project-96boards/)
 
