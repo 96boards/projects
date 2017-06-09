@@ -10,7 +10,7 @@ prior executing the script.
 
 ### Software Dependencies
  
-Installed the dependencies mentioned in [Part-2](part-2) along with the following:
+Installed the dependencies mentioned in [Part-2](../part-2) along with the following:
 
 ``` shell
 $ sudo pip install boto3
@@ -27,4 +27,4 @@ Place the trained dataset and haarcascade_frontalface_default.xml to this direct
 $ mkdir captured
 $ sudo python streamface.py
 ```
-[Link to Blog]()
+[Link to Blog](http://www.96boards.org/blog/part-4-home-surveillance-project-96boards/)
