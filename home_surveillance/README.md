@@ -12,7 +12,7 @@ describing the project and its building blocks
 
 * [Link to Blog](http://www.96boards.org/blog/part-1-home-surveillance-project-96boards/)
 
-### Part 2: Facial recognition using OpenCV
+### Part 2 - Facial recognition using OpenCV
 
 Install OpenCV on 96Boards and implement face detection using it. Script should be able to detect known
 and unknown faces.
@@ -20,7 +20,7 @@ and unknown faces.
 * [Link to Blog](http://www.96boards.org/blog/part-2-home-surveillance-project-96boards/)
 * [Link to Project](part-2)
 
-### Part 3: Part 3: Webcam tracking using Sensor Mezzanine
+### Part 3 - Webcam tracking using Sensor Mezzanine
 
 Track the known face infront of Webcam using Sensor Mezzanine and Dragonboard410C. Webcam should be mounted on Pan and Tilt setup with micro servos.
 
