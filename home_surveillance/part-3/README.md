@@ -13,7 +13,7 @@ mounted on Pan and Tilt setup with micro servos.
 
 ### Software Dependencies:
  
-Installed the dependencies mentioned in [Part-2](part-2) along with the following:
+Installed the dependencies mentioned in [Part-2](../part-2) along with the following:
 
 ``` shell
 $ sudo apt-get install pyserial
