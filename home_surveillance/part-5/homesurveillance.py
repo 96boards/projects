@@ -13,21 +13,21 @@ import signal
 import sys
 
 from flask import Flask, render_template, Response
-from stream import facedetect
+from facedetect import facedetect
 
 # Initialize global variables
 face_obj = 0
-app_run = True
+background = True
 app = Flask(__name__)
 
 # SIGINT handler
 def signal_handler(signal, frame):
-    print "exiting"
+    print "***Exiting***"
     sys.exit(0)
 
 def run(stream):
-    global app_run
-    app_run = False
+    global background
+    background = False
     time.sleep(2) 
     try:
         while True:
@@ -35,19 +35,19 @@ def run(stream):
             yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
     except:
-        app_run = True
+        background = True
 
 # Background thread to detect faces and stream
 def detect_thread():
-    global app_run
+    global background
     global face_obj
     
     # Create facedetect object
     face_obj = facedetect()
     while True:
         # Stream detected faces
-        if app_run:
-            face_obj.stream()
+        if background:
+            face_obj.capture_upload()
 
 # Function to render html page
 @app.route('/')
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     thread.start()
 
     # Attach the SIGNINT handler
-    signal.signal(signal.SIGTERM, signal_handler)
+    signal.signal(signal.SIGINT, signal_handler)
 
     # Start the server
     app.run(host='0.0.0.0', debug=False)
