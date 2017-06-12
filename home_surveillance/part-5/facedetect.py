@@ -21,7 +21,7 @@ class facedetect(object):
         self.recognizer = cv2.face.createLBPHFaceRecognizer()
 
         # Load the trainner
-        self.recognizer.load('trainner/trainner.yml')
+        self.recognizer.load('trainer/trainer.yml')
 
         # Load the classifier
         self.faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
@@ -42,7 +42,7 @@ class facedetect(object):
         self.locy = int(frame.shape[0]/2)
         self.locx = int(frame.shape[1]/2)
 
-        self.ser = serial.Serial('/dev/ttyACM0',9600)
+        self.ser = serial.Serial('/dev/tty96B0',9600)
 
     # Function to upload image onto S3 bucket
     def upload(self,image):
@@ -50,7 +50,7 @@ class facedetect(object):
         self.s3.Bucket('homesurveillance').put_object(Key=image, Body=data)
         return
 
-    def stream(self): 
+    def capture_upload(self): 
         # Capture the frame
         ret, frame = self.cap.read()
 
@@ -114,8 +114,7 @@ class facedetect(object):
             # Print name of the identified face
             cv2.putText(frame,str(Id), (x,y+h), self.fontFace, self.fontScale, self.fontColor)
 
-        # Show the captured frame
-        cv2.imshow('frame',frame) 
+        # Encode raw image to jpg format
         ret, jpeg = cv2.imencode('.jpg', frame)
         return jpeg.tobytes()
 
