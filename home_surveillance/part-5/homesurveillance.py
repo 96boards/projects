@@ -31,7 +31,7 @@ def run(stream):
     time.sleep(2) 
     try:
         while True:
-            frame = stream.capture()
+            frame = stream.capture_upload()
             yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
     except:
