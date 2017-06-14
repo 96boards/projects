@@ -61,6 +61,8 @@ $ cd home_surveillance/part-2
 $ mkdir dataset
 $ sudo python dataset.py
 ```
+Enter the user ID of known person. Execute this script multiple times for creating different person's dataset.
+
 ### Training the dataset
 
 ```shell
