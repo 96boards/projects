@@ -1,7 +1,7 @@
 CC := g++
 LDFLAGS= -lupm-i2clcd -lmraa
 CXXFLAGS=-Wall -g
-TARGETS=magic8
+TARGETS=$(TARGETS)
 
 all: magic8
 

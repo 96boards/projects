@@ -1,7 +1,7 @@
 CC := g++
 LDFLAGS=-lupm-i2clcd
 CXXFLAGS=-Wall -g
-TARGETS=hourglass
+TARGETS=$(TARGETS)
 
 all: hourglass
 
