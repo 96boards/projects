@@ -1,7 +1,12 @@
+CC := g++
 LDFLAGS=-lupm-i2clcd
 CXXFLAGS=-Wall -g
 TARGETS=hourglass
 
-all: ${TARGETS}
+all: hourglass
+
+hourglass:
+	@$(CC) $(CFLAGS) hourglass.cpp -o hourglass $(LDFLAGS)
+
 clean:
-	rm -f ${TARGETS}
+	rm -f ./hourglass
