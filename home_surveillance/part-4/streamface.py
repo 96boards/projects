@@ -1,6 +1,6 @@
-# strreamface.py - Stream the detected faces to AWS S3 bucket
-# Author - Manivannan Sadhasivam
-#
+# Title: strreamface.py - Stream the detected faces to AWS S3 bucket
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 ################################################################
 
 # Import libraries
