@@ -45,8 +45,9 @@ int main(void)
 	    /* This will generate a random number between 0-19 */
 	    x = rand() % 20; 
 	    
-	    /* Printing out the number on the serial console */
-	    cout << "pressed " << x << endl;
+	    /* Prints out the number on the serial console. 
+	    Only for verification, not necessary */
+	    cout << "Pressed! " << x << endl;
 	    
 	    /* Each number has a statement associated with it
 	    which will be displayed on the LCD when that particular
