@@ -40,7 +40,7 @@ int main()
 
     /* Clear the initial message after obtaining user input */
     lcd->clear();
-    lcd->setColor(0xff, 0xff, 0xff);
+    lcd->setColor(0xff, 0xff, 0xff); //White
 
     /* The two for loops move the cursor position after each
     interval and print a character on the display*/
