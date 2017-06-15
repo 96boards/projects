@@ -9,7 +9,6 @@
  * GPIO G3 --> Touch Sensor Module
  */
 
-#include <signal.h>
 #include <unistd.h>
 #include <iostream>
 
@@ -18,16 +17,9 @@
 
 using namespace std;
 
-bool running = true;
 int last_touch;
 
-void sig_handler(int signo)
-{
-    if (signo == SIGINT)
-        running = false;
-}
-
-int main(int argc, char* argv[])
+int main(void)
 {
     int x;
     int touch;
@@ -35,8 +27,6 @@ int main(int argc, char* argv[])
     mraa::Gpio* touch_gpio = new mraa::Gpio(29);
     mraa::Result response;
     upm::Jhd1313m1* lcd = new upm::Jhd1313m1(0, 0x3e, 0x62);
-    
-    signal(SIGINT, sig_handler);
 
     /* Clear the display and print initial message */
     lcd->clear();
@@ -46,14 +36,9 @@ int main(int argc, char* argv[])
     lcd->setCursor(1,0);
     lcd->write("and press");
 
-    
-    response = touch_gpio->dir(mraa::DIR_IN);
-    if (response != mraa::SUCCESS)
-        return 1;
-
-
-    while (running) 
+    while(true) 
     {
+	/* Read the sensor value to check for touch */
         touch = touch_gpio->read();
         if (touch == 1 && last_touch == 0) 
         {
@@ -228,10 +213,11 @@ int main(int argc, char* argv[])
 	    }
             usleep(100000);
         }
+	/* Save the previous state before running the while loop again */
         last_touch = touch;
     }
     /* Delete allocated memory */
     delete touch_gpio;
     delete lcd;
-    return response;
+    return 0;
 }
