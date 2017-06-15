@@ -1,7 +1,7 @@
-# facedetect.py - Implement face detection using trainned models
+# Title: facedetect.py - Implement face detection using trainned models
 #                 and also stream the detected faces to AWS cloud
-# Author - Manivannan Sadhasivam
-#
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 #################################################################
 
 # Import libraries
