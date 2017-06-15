@@ -1,6 +1,6 @@
-# facetrack.py - Track the known face using Webcam mounted using servo
-# Author - Manivannan Sadhasivam
-#
+# Title: facetrack.py - Track the known face using Webcam mounted using servo
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 ################################################################
 
 # Import libraries
