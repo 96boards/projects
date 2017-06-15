@@ -1,5 +1,6 @@
-# dataset.py - Create dataset for face recognition
-# Author - Manivannan Sadhasivam
+# Title: dataset.py - Create dataset for face recognition
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 #
 ################################################################
 
