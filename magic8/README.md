@@ -5,13 +5,12 @@ There are 20 statements out of which any one can appear randomly at each tap on 
 
 ## Hardware required:
 
-1. DragonBoard 410c
-2. Power Supply
-3. Sensors Mezzanine
-4. Micro USB Cable
-5. Grove-LCD 16x2 RGB Backlight
-6. Grove Touch Sensor Module
-7. Connecting cables
+1. [DragonBoard 410c](http://www.96boards.org/product/dragonboard410c/)
+2. [Power Supply](https://www.amazon.com/Adapter-Regulated-Supply-Copper-String/dp/B015G8DZK2)
+3. [Sensors Mezzanine](http://www.96boards.org/product/sensors-mezzanine/)
+4. [Micro USB Cable](https://www.amazon.com/AmazonBasics-USB-Male-Micro-Cable/dp/B01EK87A82/ref=sr_1_3?ie=UTF8&qid=1497618343&sr=8-3&keywords=micro%2Busb&th=1)
+5. [Grove-LCD 16x2 RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)
+6. [Grove Touch Sensor Module](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)
 
 ## Package dependencies:
 
