@@ -15,8 +15,10 @@ to acheive facial recognition:
 ### Software dependencies
 
 ``` shell
-$ sudo apt-get install build-essential cmake pkg-config libjpeg-dev libtiff5-dev \
-libpng12-dev libavcodec-dev libavformat-dev libpng12-dev libswscale-dev libv4l-dev \ 
+$ sudo apt-get update
+$ sudo apt-get install build-essential
+$ sudo apt-get install cmake pkg-config libjpeg-dev libtiff5-dev \
+libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
 libjasper-dev python2.7-dev python-pip
 
 $ pip install pillow
@@ -41,7 +43,6 @@ $ swapon ~/swapfile
 Build the source:
 
 ``` shell
-$ cd opencv
 $ mkdir build
 $ cd build
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=<opencv_contrib>/modules ../
@@ -52,7 +53,7 @@ $ sudo make install
 
 ```shell
 $ git clone https://github.com/96boards/projects.git
-$ cd home_surveillance/part-2
+$ cd projects/home_surveillance/part-2
 ```
 
 ### Creating dataset
@@ -61,7 +62,7 @@ $ cd home_surveillance/part-2
 $ mkdir dataset
 $ sudo python dataset.py
 ```
-Enter the user ID of known person. Execute this script multiple times for creating different person's dataset.
+Enter the user ID of known person. Execute this script multiple times with different IDs for creating multiple person's dataset.
 
 ### Training the dataset
 
