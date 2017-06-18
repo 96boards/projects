@@ -16,7 +16,7 @@ to acheive facial recognition:
 
 ``` shell
 $ sudo apt-get install build-essential cmake pkg-config libjpeg-dev libtiff5-dev \
-libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \ 
+libpng12-dev libavcodec-dev libavformat-dev libpng12-dev libswscale-dev libv4l-dev \ 
 libjasper-dev python2.7-dev python-pip
 
 $ pip install pillow
