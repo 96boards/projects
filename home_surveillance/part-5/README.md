@@ -76,7 +76,7 @@ Eg: TP Link **TD-W8968** port forwarding can be achieved by the following steps:
 $ git clone https://github.com/96boards/projects.git
 $ cd projects/home_surveillance/part-5
 ```
-After executing [Part 2](../part-2), copy the trainer directory and haarcascade_frontalface_default.xml into part-5
+Copy the trainer directory and haarcascade_frontalface_default.xml into part-5
 
 ```shell
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
@@ -87,4 +87,4 @@ $ mkdir captured
 ```shell
 $ sudo python home_surveillance.py
 ``` 
-Rremote stream can be seen by navigating to Router's public IP.
+Remote stream can be seen by navigating to Router's public IP.
