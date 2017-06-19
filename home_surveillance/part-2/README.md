@@ -1,7 +1,9 @@
 # Part 2: Facial recognition using OpenCV
 
 Install OpenCV on 96Boards and implement face detection / recognition. Following are the steps necessary
-to acheive facial recognition:
+to acheive facial recognition.
+
+If you would like to read more about this project, please visit [this blog](http://www.96boards.org/blog/part-2-home-surveillance-project-96boards/).
 
 # Table of Contents
 
@@ -123,5 +125,3 @@ $ sudo python trainer.py
 ```shell
 $ sudo python facedetect.py
 ```
-
-* [Link to Blog](http://www.96boards.org/blog/part-2-home-surveillance-project-96boards/)
