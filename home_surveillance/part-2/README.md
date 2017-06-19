@@ -7,14 +7,14 @@ If you would like to read more about this project, please visit [this blog](http
 
 # Table of Contents
 
-- [1) Hardware](#hardware)
+- [1) Hardware](#1-hardware)
    - [1.1) Hardware requirements](#11-hardware-requirement)
    - [1.2) Hardware setup](#12-hardware-setup)
-- [2) Software](#software)   
+- [2) Software](#2-software)   
    - [2.1) Operating System](#21-operating-system)
    - [2.2) Package dependencies](#22-software-dependencies)
    - [2.3) OpenCV Installation](#23-opencv-installation)
-- [3) Project Start](#project-start)
+- [3) Project Start](#3-project-start)
    - [3.1) Create dataset](#31-create-dataset)
    - [3.2) Train the dataset](#32-train-the-dataset)
    - [3.3) Implement face detection](#33-implement-face-detection)
