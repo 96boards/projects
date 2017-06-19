@@ -14,6 +14,10 @@ to acheive facial recognition:
    - [Train the dataset](part-2#train-the-dataset)
    - [Implement face detection](part-2#implement-face-detection)
 
+***
+
+# Hardware
+
 ## Hardware requirements
 
 - [Dragonboard 410c](http://www.96boards.org/product/dragonboard410c/)
@@ -27,13 +31,15 @@ to acheive facial recognition:
 - Connect I/O devices (Monitor, Keyboard, etc...)
 - Power on your DragonBoard 410c with 96Boards compliant power supply
 
-## Software
+***
 
-### Operating System
+# Software
+
+## Operating System
 
 - [Linaro Debian based OS (latest)](https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/Downloads/Debian.md)
 
-### Package Dependencies
+## Package Dependencies
 
 ``` shell
 $ sudo apt-get update
@@ -57,7 +63,7 @@ $ sudo apt-get update
 
 [Return to initial package dependencies](part-2#package-dependencies)
 
-### OpenCV Installation
+## OpenCV Installation
 
 ``` shell
 $ git clone https://github.com/opencv/opencv.git
@@ -67,33 +73,38 @@ $ git checkout 3.2.0
 $ cd ../opencv
 $ git checkout 3.2.0
 ```
-Turn ON SWAP partition:
+###### Turn ON SWAP partition:
 
 ``` shell
 $ dd if=/dev/zero of=~/swapfile bs=1M count=512
 $ sudo mkswap ~/swapfile
 $ sudo swapon ~/swapfile
 ```
-Build the source:
+###### Build the source:
 
 ``` shell
 $ mkdir build
 $ cd build
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=<opencv_contrib>/modules ../
 ```
-Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
+
+> Note: Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
+
 ```shell
 $ make -j4
 $ sudo make install
 ```
-## Project Start
+
+***
+
+# Project Start
 
 ```shell
 $ git clone https://github.com/96boards/projects.git
 $ cd projects/home_surveillance/part-2
 ```
 
-### Creating dataset
+## Creating dataset
 
 ```shell
 $ mkdir dataset
@@ -101,14 +112,14 @@ $ sudo python dataset.py
 ```
 Enter the user ID of known person. Execute this script multiple times with different IDs for creating multiple person's dataset.
 
-### Training the dataset
+## Training the dataset
 
 ```shell
 $ mkdir trainer
 $ sudo python trainer.py
 ```
 
-### Implement face detection
+## Implement face detection
 
 ```shell
 $ sudo python facedetect.py
