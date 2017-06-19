@@ -26,10 +26,10 @@ $ sudo apt-get install libupm-dev
 ## Building and Running:
 
 ```shell
-$ git clone https://github.com/96boards/projects.git      
-$ cd projects	
-$ cd magic8																												
-$ make																															
+$ git clone https://github.com/96boards/projects.git
+$ cd projects
+$ cd magic8
+$ make
 $ ./magic8
 ```
 
