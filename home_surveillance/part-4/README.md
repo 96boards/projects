@@ -13,7 +13,7 @@ prior executing the script.
 Installed the dependencies mentioned in [Part-2](../part-2) along with the following:
 
 ``` shell
-$ sudo pip install boto3
+$ sudo easy_install boto3
 ```
 ### Create S3 bucket:
  
