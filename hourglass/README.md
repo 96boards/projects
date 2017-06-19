@@ -15,7 +15,9 @@ interfacing an LCD with the board and installing the necessary libraries.
 
 ## Package dependencies:
 UPM Library
-
+```
+$ sudo apt-get install libupm-dev
+```
 ## Building and Running:
 
 ```
