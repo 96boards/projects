@@ -5,14 +5,17 @@ to acheive facial recognition:
 
 # Table of Contents
 
-- [Hardware requirements](part-2#hardware-requirement)
-- [Hardware setup](part-2#hardware-setup)
-- [Software dependencies](part-2#software-dependencies)
-   - [OpenCV Installation](part-2#opencv-installation)
-- [Project Start](part-2#project-start)
-   - [Create dataset](part-2#create-dataset)
-   - [Train the dataset](part-2#train-the-dataset)
-   - [Implement face detection](part-2#implement-face-detection)
+- [Hardware](#hardware)
+   - [Hardware requirements](#hardware-requirement)
+   - [Hardware setup](#hardware-setup)
+- [Software](#software)   
+   - [Operating System](#operating-system)
+   - [Package dependencies](#software-dependencies)
+   - [OpenCV Installation](#opencv-installation)
+- [Project Start](#project-start)
+   - [Create dataset](#create-dataset)
+   - [Train the dataset](#train-the-dataset)
+   - [Implement face detection](#implement-face-detection)
 
 ***
 
@@ -61,7 +64,7 @@ $ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt
 $ sudo apt-get update
 ```
 
-[Return to initial package dependencies](part-2#package-dependencies)
+[Return to initial package dependencies](#package-dependencies)
 
 ## OpenCV Installation
 
