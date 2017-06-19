@@ -17,7 +17,7 @@ Installed the dependencies mentioned in [Part-2](../part-2), [Part-3](../part-3)
 along with the following:
 
 ```shell
-sudo pip install Flask
+sudo easy_install Flask
 ```
 Execute the steps mentioned in [Part-2](../part-2), [Part-3](../part-3), and [Part-4](../part-4) before going further.
 
