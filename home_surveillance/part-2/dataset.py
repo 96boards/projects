@@ -1,5 +1,6 @@
-# dataset.py - Create dataset for face recognition
-# Author - Manivannan Sadhasivam
+# Title: dataset.py - Create dataset for face recognition
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 #
 ################################################################
 
@@ -15,7 +16,9 @@ detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # Prompt for person name
 id = raw_input('Enter person ID: ')
 count = 0
-max_count = 20
+
+# Maximum count for the dataset
+max_count = 30
 
 while(True):
 

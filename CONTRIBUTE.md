@@ -34,6 +34,6 @@ the source code and README.md with following details:
 * Link to video
 * Conclusion
 
-Source code should contain the Copyright of author along with the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0) license.
+Source code should contain the Copyright of author along with the [MIT](https://opensource.org/licenses/MIT) license.
 
 

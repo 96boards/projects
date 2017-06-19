@@ -1,5 +1,6 @@
-// facetrack_servo - Arduino code for servo tracking
-// Author - Manivannan Sadhasivam
+// Title: facetrack_servo - Arduino code for servo tracking
+// Author: Manivannan Sadhasivam
+// Copyright (c) 2017 Linaro Limited
 
 #include <Servo.h>
 

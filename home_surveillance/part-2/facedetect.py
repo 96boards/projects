@@ -1,5 +1,6 @@
-# facedetect.py - Implement face detection using trainned models
-# Author - Manivannan Sadhasivam
+# Title: facedetect.py - Implement face detection using trainned models
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 #
 ################################################################
 

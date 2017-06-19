@@ -27,12 +27,13 @@ $ sudo apt-get install libmraa-dev
 ### Hardware Setup:
 To begin, connect the Sensors Mezzanine board onto the DragonBoard via the low-speed expansion connector on both boards. Use the Grove Universal 4 pin cables to connect the LCD to I2C0 and the Touch sensor module onto GPIO G3. You can find an image of the setup in the images folder. That’s it! We’re all set to run our application.
 
-### Building and Running:
-```
-$ git clone https://github.com/96boards/projects.git      
-$ cd projects	
-$ cd magic8																												
-$ make																															
+## Building and Running:
+
+```shell
+$ git clone https://github.com/96boards/projects.git
+$ cd projects
+$ cd magic8
+$ make
 $ ./magic8
 ```
 

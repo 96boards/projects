@@ -1,10 +1,10 @@
-# homesurveillance.py - Script to implement facedetection combined with webcam
+# Title: homesurveillance.py - Script to implement facedetection combined with webcam
 #			control and streaming of detected faces to AWS cloud. 
 #			Live streaming is also added with the help of Flask
 #			micro web framework
 #
-# Author - Manivannan Sadhasivam
-#
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 #################################################################
 
 import threading

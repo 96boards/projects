@@ -1,5 +1,6 @@
-# trainer.py - Create trainer model using dataset
-# Author - Manivannan Sadhasivam
+# Title: trainer.py - Create trainer model using dataset
+# Author: Manivannan Sadhasivam
+# Copyright (c) 2017 Linaro Limited
 #
 ################################################################
 
