@@ -34,8 +34,6 @@ to acheive facial recognition:
 - Connect I/O devices (Monitor, Keyboard, etc...)
 - Power on your DragonBoard 410c with 96Boards compliant power supply
 
-***
-
 # Software
 
 ## Operating System
@@ -97,8 +95,6 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_E
 $ make -j4
 $ sudo make install
 ```
-
-***
 
 # Project Start
 
