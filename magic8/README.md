@@ -16,11 +16,11 @@ There are 20 statements out of which any one can appear randomly at each tap on 
 
 1. MRAA Library
 ```
-$ sudo apt-get install libupm-dev`
+$ sudo apt-get install libupm-dev
 ```
 2. UPM Library
 ```
-$ sudo apt-get install libmraa-dev`
+$ sudo apt-get install libmraa-dev
 ```
 ## Building and Running:
 ```
