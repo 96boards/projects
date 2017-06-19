@@ -1,42 +1,63 @@
 # Part 2: Facial recognition using OpenCV
 
-Install OpenCV on 96Boards and implement face detection using it. Following are the steps necessary
+Install OpenCV on 96Boards and implement face detection / recognition. Following are the steps necessary
 to acheive facial recognition:
 
-* Create dataset
-* Train the dataset
-* Implement face detection
+# Table of Contents
 
-### Hardware requirements and setup
+- [Hardware requirements](part-2#hardware-requirement)
+- [Hardware setup](part-2#hardware-setup)
+- [Software dependencies](part-2#software-dependencies)
+   - [OpenCV Installation](part-2#opencv-installation)
+- [Project Start](part-2#project-start)
+   - [Create dataset](part-2#create-dataset)
+   - [Train the dataset](part-2#train-the-dataset)
+   - [Implement face detection](part-2#implement-face-detection)
 
-* Dragonboard410C
-* USB Webcam
+## Hardware requirements
 
-Connect USB webcam ,I/O devices (Monitor, Keyboard etc...) to Dragonboard and power up.
+- [Dragonboard 410c](http://www.96boards.org/product/dragonboard410c/)
+- [96Boards Compliant Power Supply](http://www.96boards.org/product/power/)
+- USB Webcam
 
-### Software dependencies
+## Hardware setup
+
+- DragonBoard 410 is powered off
+- Connect USB webcam
+- Connect I/O devices (Monitor, Keyboard, etc...)
+- Power on your DragonBoard 410c with 96Boards compliant power supply
+
+## Software
+
+### Operating System
+
+- [Linaro Debian based OS (latest)](https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/Downloads/Debian.md)
+
+### Package Dependencies
 
 ``` shell
 $ sudo apt-get update
 $ sudo apt-get install build-essential
-```
----------------------------------------------------------------------------------------
-For release >= 17.04, some of the packages needs to be installed from previous release. So, execute the following commands
-if you are using latest release (>=17.04)
-```shell
-$ echo "deb http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
-$ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
-$ sudo apt-get update
-```
----------------------------------------------------------------------------------------
-```shell
+
 $ sudo apt-get install cmake pkg-config libjpeg-dev libtiff5-dev \
 libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
 libjasper-dev python2.7-dev python-pip python-setuptools
 
 $ sudo easy_install pillow
 ```
-### OpenCV - Installation
+
+> Note: For release >= 17.04, some of the packages needs to be installed from previous release. So, execute the following commands
+if you are using latest release (>=17.04)
+
+```shell
+$ echo "deb http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
+$ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
+$ sudo apt-get update
+```
+
+[Return to initial package dependencies](part-2#package-dependencies)
+
+### OpenCV Installation
 
 ``` shell
 $ git clone https://github.com/opencv/opencv.git
@@ -65,7 +86,7 @@ Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
 $ make -j4
 $ sudo make install
 ```
-### Cloning the project
+## Project Start
 
 ```shell
 $ git clone https://github.com/96boards/projects.git
