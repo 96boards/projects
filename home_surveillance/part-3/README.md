@@ -3,13 +3,22 @@
 Track the known face infront of Webcam using Sensor Mezzanine and Dragonboard410C. Webcam should be
 mounted on Pan and Tilt setup with micro servos.
 
-### Hardware requirements:
+### Hardware requirements and Setup:
 
 * Dragonboard410C
 * USB Webcam
 * Sensors Mezzanine
 * Servo mount - Pan and Tilt
 * Micro servos
+
+Assemble Pan and Tilt servo by following the instructions [here](https://learn.adafruit.com/mini-pan-tilt-kit-assembly/getting-started). Then mount USB webcam on servo assembly and connect to Sensors Mezzanine according to the following connections:
+
+* Pin 9   —-> Servo controlling X axis
+* Pin 10  —-> Servo controlling Y axis
+* 5v      —-> Servo Vcc
+* Gnd     —-> Servo Gnd
+
+Finally, connect Sensors Mezzanine , USB webcam and other I/O devices (Monitor, Keyboard) to Dragonboard.
 
 ### Software Dependencies:
  
