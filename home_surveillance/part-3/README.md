@@ -16,7 +16,7 @@ mounted on Pan and Tilt setup with micro servos.
 Installed the dependencies mentioned in [Part-2](../part-2) along with the following:
 
 ``` shell
-$ sudo apt-get install pyserial
+$ sudo easy_install pyserial
 ```
 ### Arduino Programming
 
