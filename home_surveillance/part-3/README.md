@@ -29,6 +29,10 @@ $ sudo easy_install pyserial
 ```
 ### Arduino Programming
 
+``` shell
+$ git clone https://github.com/96boards/projects.git
+$ cd projects/home-surveillance/part-3
+```
 Open facetrack.ino using Arduino IDE and upload the code to Sensor Mezzanine with the following settings:
 
 * Board 	       ----> Arduino Uno
@@ -37,13 +41,10 @@ Open facetrack.ino using Arduino IDE and upload the code to Sensor Mezzanine wit
 
 ### Webcam Tracking
 
-``` shell
-$ git clone https://github.com/96boards/projects.git
-$ cd projects/home-surveillance/part-3
-```
-Place the trained dataset and haarcascade_frontalface_default.xml to this directory
+Place the trained dataset and haarcascade_frontalface_default.xml to part-3 directory
 
 ```shell
+$ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
 $ sudo python facetrack.py
 ```
 
