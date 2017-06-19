@@ -3,7 +3,7 @@
 Install OpenCV on 96Boards and implement face detection / recognition. Following are the steps necessary
 to acheive facial recognition.
 
-If you would like to read more about this project, please visit [this blog](http://www.96boards.org/blog/part-2-home-surveillance-project-96boards/).
+If you would like to read more about this project, please visit [this blog](http://www.96boards.org/blog/part-2-home-surveillance-project-96boards/) written by Manivannan Sadhasivam.
 
 # Table of Contents
 
