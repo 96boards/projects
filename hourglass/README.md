@@ -21,7 +21,7 @@ $ sudo apt-get install libupm-dev
 
 ## Instructions: 
 ### Hardware Setup:
-First, connect the Sensors Mezzanine board onto the DragonBoard via the low-speed expansion connector on both boards. Use the Grove Universal 4 pin cables to connect the LCD to I2C0. That’s it! We’re all set to run our application.
+First, connect the Sensors Mezzanine board onto the DragonBoard via the low-speed expansion connector on both boards. Use the Grove Universal 4 pin cables to connect the LCD to I2C0. You can find the images of the hardware setup in the images folder. That’s it! We’re all set to run our application.
 
 
 ### Building and Running:
