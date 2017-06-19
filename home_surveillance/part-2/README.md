@@ -17,11 +17,22 @@ to acheive facial recognition:
 ``` shell
 $ sudo apt-get update
 $ sudo apt-get install build-essential
+```
+---------------------------------------------------------------------------------------
+For release >= 17.04, some of the packages needs to be installed from previous release. So, execute the following commands
+if you are using latest release (>=17.04)
+```shell
+$ echo "deb http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
+$ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
+$ sudo apt-get update
+```
+---------------------------------------------------------------------------------------
+```shell
 $ sudo apt-get install cmake pkg-config libjpeg-dev libtiff5-dev \
 libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
-libjasper-dev python2.7-dev python-pip
+libjasper-dev python2.7-dev python-pip python-setuptools
 
-$ pip install pillow
+$ sudo easy_install pillow
 ```
 ### OpenCV - Installation
 
@@ -37,8 +48,8 @@ Turn ON SWAP partition:
 
 ``` shell
 $ dd if=/dev/zero of=~/swapfile bs=1M count=512
-$ mkswap ~/swapfile
-$ swapon ~/swapfile
+$ sudo mkswap ~/swapfile
+$ sudo swapon ~/swapfile
 ```
 Build the source:
 
@@ -46,6 +57,9 @@ Build the source:
 $ mkdir build
 $ cd build
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=<opencv_contrib>/modules ../
+```
+Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
+```shell
 $ make -j4
 $ sudo make install
 ```
