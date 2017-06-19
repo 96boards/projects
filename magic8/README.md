@@ -18,6 +18,10 @@ There are 20 statements out of which any one can appear randomly at each tap on 
 1. MRAA Library
 2. UPM Library
 
+```shell
+$ sudo apt-get install libmraa-dev
+$ sudo apt-get install libupm-dev
+
 ## Building and Running:
 ```
 $ git clone https://github.com/96boards/projects.git      
