@@ -8,16 +8,16 @@ If you would like to read more about this project, please visit [this blog](http
 # Table of Contents
 
 - [1) Hardware](#hardware)
-   - [1.1) Hardware requirements](#hardware-requirement)
-   - [1.2) Hardware setup](#hardware-setup)
+   - [1.1) Hardware requirements](#11-hardware-requirement)
+   - [1.2) Hardware setup](#12-hardware-setup)
 - [2) Software](#software)   
-   - [2.1) Operating System](#operating-system)
-   - [2.2) Package dependencies](#software-dependencies)
-   - [2.3) OpenCV Installation](#opencv-installation)
+   - [2.1) Operating System](#21-operating-system)
+   - [2.2) Package dependencies](#22-software-dependencies)
+   - [2.3) OpenCV Installation](#23-opencv-installation)
 - [3) Project Start](#project-start)
-   - [3.1) Create dataset](#create-dataset)
-   - [3.2) Train the dataset](#train-the-dataset)
-   - [3.3) Implement face detection](#implement-face-detection)
+   - [3.1) Create dataset](#31-create-dataset)
+   - [3.2) Train the dataset](#32-train-the-dataset)
+   - [3.3) Implement face detection](#33-implement-face-detection)
 
 ***
 
@@ -64,7 +64,7 @@ $ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt
 $ sudo apt-get update
 ```
 
-[Return to initial package dependencies](#package-dependencies)
+[Return to initial package dependencies](#22-package-dependencies)
 
 ## 2.3 OpenCV Installation
 
