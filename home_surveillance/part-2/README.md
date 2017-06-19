@@ -94,7 +94,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_E
 > Note: Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
 
 ```shell
-$ make -j4
+$ make -j 1
 $ sudo make install
 ```
 
