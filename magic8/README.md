@@ -15,8 +15,13 @@ There are 20 statements out of which any one can appear randomly at each tap on 
 ## Package dependencies:
 
 1. MRAA Library
+```
+$ sudo apt-get install libupm-dev`
+```
 2. UPM Library
-
+```
+$ sudo apt-get install libmraa-dev`
+```
 ## Building and Running:
 ```
 $ git clone https://github.com/96boards/projects.git      
