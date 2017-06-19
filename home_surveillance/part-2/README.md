@@ -7,10 +7,12 @@ to acheive facial recognition:
 * Train the dataset
 * Implement face detection
 
-### Hardware requirements
+### Hardware requirements and setup
 
 * Dragonboard410C
 * USB Webcam
+
+Connect USB webcam ,I/O devices (Monitor, Keyboard etc...) to Dragonboard and power up.
 
 ### Software dependencies
 
