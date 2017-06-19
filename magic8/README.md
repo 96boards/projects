@@ -5,23 +5,27 @@ There are 20 statements out of which any one can appear randomly at each tap on 
 
 ## Hardware required:
 
-1. DragonBoard 410c
-2. Power Supply
-3. Sensors Mezzanine
-4. Micro USB Cable
-5. Grove-LCD 16x2 RGB Backlight
-6. Grove Touch Sensor Module
-7. Connecting cables
+1. [DragonBoard 410c](http://www.96boards.org/product/dragonboard410c/)
+2. [Power Supply](https://www.amazon.com/Adapter-Regulated-Supply-Copper-String/dp/B015G8DZK2)
+3. [Sensors Mezzanine](http://www.96boards.org/product/sensors-mezzanine/)
+4. [Micro USB Cable](https://www.amazon.com/AmazonBasics-USB-Male-Micro-Cable/dp/B01EK87A82/ref=sr_1_3?ie=UTF8&qid=1497618343&sr=8-3&keywords=micro%2Busb&th=1)
+5. [Grove-LCD 16x2 RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)
+6. [Grove Touch Sensor Module](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)
 
 ## Package dependencies:
 
 1. MRAA Library
-2. UPM Library
-
-```shell
-$ sudo apt-get install libmraa-dev
+```
 $ sudo apt-get install libupm-dev
 ```
+2. UPM Library
+```
+$ sudo apt-get install libmraa-dev
+```
+
+## Instructions:
+### Hardware Setup:
+To begin, connect the Sensors Mezzanine board onto the DragonBoard via the low-speed expansion connector on both boards. Use the Grove Universal 4 pin cables to connect the LCD to I2C0 and the Touch sensor module onto GPIO G3. You can find an image of the setup in the images folder. That’s it! We’re all set to run our application.
 
 ## Building and Running:
 
