@@ -62,14 +62,14 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    # Create a thread for running facedetection
+    # Create a thread for running facedetection in background
     thread = threading.Thread(target=detect_thread)
     thread.daemon = True
 
     # Start the thread
     thread.start()
 
-    # Attach the SIGNINT handler
+    # Attach the SIGINT handler
     signal.signal(signal.SIGINT, signal_handler)
 
     # Start the server
