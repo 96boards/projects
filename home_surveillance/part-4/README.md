@@ -3,10 +3,12 @@
 Set up streaming of data from Dragonboard to AWS S3 bucket. AWS account and S3 needs to be configured
 prior executing the script.
 
-### Hardware requirements
+### Hardware requirements and Setup
 
 * Dragonboard410C
 * USB Webcam
+
+Connect USB webcam and other I/O devices (Monitor, Keyboard etc...) to Dragonboard.
 
 ### Software Dependencies
  
