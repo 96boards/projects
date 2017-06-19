@@ -5,42 +5,42 @@ to acheive facial recognition:
 
 # Table of Contents
 
-- [Hardware](#hardware)
-   - [Hardware requirements](#hardware-requirement)
-   - [Hardware setup](#hardware-setup)
-- [Software](#software)   
-   - [Operating System](#operating-system)
-   - [Package dependencies](#software-dependencies)
-   - [OpenCV Installation](#opencv-installation)
-- [Project Start](#project-start)
-   - [Create dataset](#create-dataset)
-   - [Train the dataset](#train-the-dataset)
-   - [Implement face detection](#implement-face-detection)
+- [1) Hardware](#hardware)
+   - [1.1) Hardware requirements](#hardware-requirement)
+   - [1.2) Hardware setup](#hardware-setup)
+- [2) Software](#software)   
+   - [2.1) Operating System](#operating-system)
+   - [2.2) Package dependencies](#software-dependencies)
+   - [2.3) OpenCV Installation](#opencv-installation)
+- [3) Project Start](#project-start)
+   - [3.1) Create dataset](#create-dataset)
+   - [3.2) Train the dataset](#train-the-dataset)
+   - [3.3) Implement face detection](#implement-face-detection)
 
 ***
 
-# Hardware
+# 1) Hardware
 
-## Hardware requirements
+## 1.1 Hardware requirements
 
 - [Dragonboard 410c](http://www.96boards.org/product/dragonboard410c/)
 - [96Boards Compliant Power Supply](http://www.96boards.org/product/power/)
 - USB Webcam
 
-## Hardware setup
+## 1.2 Hardware setup
 
 - DragonBoard 410 is powered off
 - Connect USB webcam
 - Connect I/O devices (Monitor, Keyboard, etc...)
 - Power on your DragonBoard 410c with 96Boards compliant power supply
 
-# Software
+# 2) Software
 
-## Operating System
+## 2.1 Operating System
 
 - [Linaro Debian based OS (latest)](https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/Downloads/Debian.md)
 
-## Package Dependencies
+## 2.2 Package Dependencies
 
 ``` shell
 $ sudo apt-get update
@@ -64,7 +64,7 @@ $ sudo apt-get update
 
 [Return to initial package dependencies](#package-dependencies)
 
-## OpenCV Installation
+## 2.3 OpenCV Installation
 
 ``` shell
 $ git clone https://github.com/opencv/opencv.git
@@ -96,14 +96,14 @@ $ make -j4
 $ sudo make install
 ```
 
-# Project Start
+# 3) Project Start
 
 ```shell
 $ git clone https://github.com/96boards/projects.git
 $ cd projects/home_surveillance/part-2
 ```
 
-## Creating dataset
+## 3.1 Creating dataset
 
 ```shell
 $ mkdir dataset
@@ -111,14 +111,14 @@ $ sudo python dataset.py
 ```
 Enter the user ID of known person. Execute this script multiple times with different IDs for creating multiple person's dataset.
 
-## Training the dataset
+## 3.2 Training the dataset
 
 ```shell
 $ mkdir trainer
 $ sudo python trainer.py
 ```
 
-## Implement face detection
+## 3.3 Implement face detection
 
 ```shell
 $ sudo python facedetect.py
