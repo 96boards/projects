@@ -79,6 +79,7 @@ $ cd projects/home-surveillance/part-4
 Place the trained dataset and haarcascade_frontalface_default.xml to this directory
 
 ``` shell
+$ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
 $ mkdir captured
 $ sudo python streamface.py
 ```
