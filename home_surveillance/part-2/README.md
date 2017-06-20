@@ -44,27 +44,21 @@ If you would like to read more about this project, please visit [this blog](http
 
 ## 2.2 Package Dependencies
 
-``` shell
-$ sudo apt-get update
-$ sudo apt-get install build-essential
-
-$ sudo apt-get install cmake pkg-config libjpeg-dev libtiff5-dev \
-libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
-libjasper-dev python2.7-dev python-pip python-setuptools
-
-$ sudo easy_install pillow
-```
-
-> Note: For release >= 17.04, some of the packages needs to be installed from previous release. So, execute the following commands
+> Note: For release >= 17.04, some of the packages needs to be installed from previous releases. Execute the following commands
 if you are using latest release (>=17.04)
 
 ```shell
 $ echo "deb http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
 $ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
-$ sudo apt-get update
-```
 
-[Return to initial package dependencies](#22-package-dependencies)
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install build-essential cmake pkg-config libjpeg-dev libtiff5-dev \
+libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
+libjasper-dev python2.7-dev python-pip python-setuptools
+
+$ sudo easy_install pillow
+```
 
 ## 2.3 OpenCV Installation
 
