@@ -105,6 +105,14 @@ $ cd projects/home_surveillance/part-2
 $ mkdir dataset
 $ sudo python dataset.py
 ```
+> Note: If you encounter any error like: Unable to stop stream: Invalid argument. It is most likely your default video device is not accepted by OpenCV. So, just replace 0 with appropriate video device id in *cap = cv2.VideoCapture(0)* in all python scripts.
+
+> For finding the total number of video devices in DragonBoard, execute the following command
+> ```shell 
+> $ ls /dev/video*
+> ```
+
+
 Enter the user ID of known person. Execute this script multiple times with different IDs for creating multiple person's dataset.
 
 ## 3.2 Training dataset
