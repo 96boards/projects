@@ -47,6 +47,7 @@ Install the dependencies mentioned in [Part-2](../part-2) along with the followi
 
 ``` shell
 $ sudo easy_install boto3
+$ sudo apt-get install awscli
 ```
 ## 2.3 Create S3 bucket
  
@@ -86,20 +87,17 @@ $ sudo easy_install boto3
 ## 2.5 Setup Boto SDK
  
 - Obtain the AWS key Id and secret key by following the instructions [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/)
+
+- Execute the below command to configure boto SDK with created AWS Id and key
+ ```shell
+ $ sudo aws configure
+ ```
+ - Enter AWS access Id and press Enter
+ - Enter Secret key and press Enter 
+ - Enter region name and press Enter
+ - You can leave the default output format as [None]. Just press Enter
+ - Now Boto SDK has been configured. The entered credentials could be found in ~/.aws/config
  
-- Paste the following content in ~/.aws/credentials hosted on DragonBoard410c.
-
- ```shell
-	[default]
-	aws_access_key_id = YOUR_ACCESS_KEY
-	aws_secret_access_key = YOUR_SECRET_KEY
- ```
-- Replace AWS IAM key appropriately and set default region as same as what was given during AWS account creation in ~/.aws/config
-
- ```shell
-	[default]
-	region=us-east-1
- ```
 # 3) Project Execution
 
 ``` shell
