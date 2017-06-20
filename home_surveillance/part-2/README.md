@@ -54,8 +54,9 @@ $ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install build-essential cmake pkg-config libjpeg-dev libtiff5-dev \
-libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libgtk2.0-dev \
+libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
 libjasper-dev python2.7-dev python-pip python-setuptools
+$ sudo apt-get install libgtk2.0-dev
 
 $ sudo easy_install pillow
 ```
