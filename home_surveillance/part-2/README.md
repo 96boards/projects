@@ -54,7 +54,7 @@ $ echo "deb-src http://deb.debian.org/debian jessie main" | sudo tee -a /etc/apt
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install build-essential cmake pkg-config libjpeg-dev libtiff5-dev \
-libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
+libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libgtk2.0-dev \
 libjasper-dev python2.7-dev python-pip python-setuptools
 
 $ sudo easy_install pillow
@@ -82,13 +82,13 @@ $ sudo swapon ~/swapfile
 ``` shell
 $ mkdir build
 $ cd build
-$ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=<opencv_contrib>/modules ../
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PRECOMPILED_HEADERS=OFF -DOPENCV_EXTRA_MODULES_PATH=<opencv_contrib>/modules ../
 ```
 
 > Note: Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
 
 ```shell
-$ make -j 1
+$ make -j 2
 $ sudo make install
 ```
 
