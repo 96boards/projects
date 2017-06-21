@@ -13,9 +13,10 @@ If you would like to read more about this project, please visit [this blog](http
 - [2) Software](#2-software)   
    - [2.1) Operating System](#21-operating-system)
    - [2.2) Package dependencies](#22-package-dependencies)
-   - [2.3) Create S3 bucket](#23-create-s3-bucket)
-   - [2.4) Set Object policy](#24-set-object-policy)
-   - [2.5) Setup Boto SDK](#25-setup-boto-sdk)
+   - [2.3) Setup AWS account](#23-setup-aws-account)
+   - [2.4) Create S3 bucket](#24-create-s3-bucket)
+   - [2.5) Set Object policy](#25-set-object-policy)
+   - [2.6) Setup Boto SDK](#26-setup-boto-sdk)
 - [3) Project Execution](#3-project-execution)
 
 ***
@@ -49,7 +50,11 @@ Install the package dependencies mentioned in [Part-2](../part-2#22-package-depe
 $ sudo easy_install boto3
 $ sudo apt-get install awscli
 ```
-## 2.3 Create S3 bucket
+## 2.3 Setup AWS account
+
+Follow the instructions mentioned [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) for creating AWS account.
+
+## 2.4 Create S3 bucket
  
 - Go to https://aws.amazon.com/ and select Sign in to console 
 - Login to AWS using your Email and password (You’ll be redirected to console if you are already logged in)
@@ -61,7 +66,7 @@ $ sudo apt-get install awscli
 - In the final window, you should see the Bucket name, region, properties and permissions. Under permissions the instance of the login account should get displayed. Then, click Create bucket.
 - The created bucket would get listed in the AWS S3 console.
  
-## 2.4 Set Object policy
+## 2.5 Set Object policy
  
 - Select the created bucket and click Permissions tab on top
 - Select Bucket policy and paste the following policy in the text field
@@ -84,7 +89,7 @@ $ sudo apt-get install awscli
 - Replace ‘homesurveillance’ with your bucket name in the above policy and click Save.
 - The above shown policy is just for demonstration purpose as it allows all AWS users to gain full access to the created bucket.
  
-## 2.5 Setup Boto SDK
+## 2.6 Setup Boto SDK
  
 - Obtain the AWS key Id and secret key by following the instructions [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/)
 
