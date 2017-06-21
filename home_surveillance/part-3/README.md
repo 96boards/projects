@@ -76,7 +76,7 @@ Place the trained dataset and haarcascade_frontalface_default.xml to part-3 dire
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
 $ sudo python facetrack.py
 ```
-The above script will track the known face using webcam mounted on Servo Pan/Tilt system. The servo position would get adjuested to center the known face.
+The above script will track the known face using webcam mounted on Servo Pan/Tilt system. The servo system will adjust it's position continuously to center the known face.
 
 > Limitation: Webcam can only track the first known face at a time.
 
