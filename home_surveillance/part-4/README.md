@@ -43,7 +43,7 @@ If you would like to read more about this project, please visit [this blog](http
 
 ## 2.2 Package Dependencies
  
-Install the dependencies mentioned in [Part-2](../part-2) along with the following:
+Install the package dependencies mentioned in [Part-2](../part-2#22-package-dependencies) along with the following:
 
 ``` shell
 $ sudo easy_install boto3
@@ -100,15 +100,19 @@ $ sudo apt-get install awscli
  
 # 3) Project Execution
 
+Clone the project repository
+
 ``` shell
 $ git clone https://github.com/96boards/projects.git
 $ cd projects/home-surveillance/part-4
 ```
-Place the trained dataset and haarcascade_frontalface_default.xml to part-4 directory
+Create a trained datastet by following the instructions in [Part-2](../part-2#3-project-execution). Then, copy the trained dataset and haarcascade_frontalface_default.xml to part-4 directory
 
 ``` shell
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
 $ mkdir captured
 $ sudo python streamface.py
 ```
+Script will stream the first instance of detected faces onto AWS S3 bucket. Go to [AWS S3 bucket](https://aws.amazon.com/s3/) to see the list of streamed faces.
+
 [Link to Blog](http://www.96boards.org/blog/part-4-home-surveillance-project-96boards/)
