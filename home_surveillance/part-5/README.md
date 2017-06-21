@@ -107,11 +107,13 @@ Eg: TP Link **TD-W8968** port forwarding can be achieved by the following steps:
 
 # 3) Project Execution
 
+Clone the project source
+
 ```shell
 $ git clone https://github.com/96boards/projects.git
 $ cd projects/home_surveillance/part-5
 ```
-Copy the trainer directory and haarcascade_frontalface_default.xml into part-5
+Place the trained dataset and haarcascade_frontalface_default.xml created in [Part-2](../part-2) to current directory. Also, update the USB webcam video source as specified in [Part-2](../part-2/README.md#31-creating-dataset)
 
 ```shell
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
@@ -122,4 +124,11 @@ $ mkdir captured
 ```shell
 $ sudo python home_surveillance.py
 ``` 
-Remote stream can be seen by navigating to Router's public IP.
+Now, if a known face is detected infront of webcam, following things will happen simultaneously.
+
+1. First instance of the face will get uploaded to AWS S3 bucket
+2. Webcam will track the known face
+3. User will get email notification if the trigger event is set for that particular face as mentioned [here](#26-create-notification-for-blacklisted-faces)
+4. Webcam ouput will get streamed 
+
+Go to router's public ip to see the live face tracking and recognition
