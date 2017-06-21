@@ -70,12 +70,15 @@ Open facetrack.ino using Arduino IDE and upload the code to Sensor Mezzanine wit
 
 # 3) Project Execution
 
-Place the trained dataset and haarcascade_frontalface_default.xml to part-3 directory
+Place the trained dataset and haarcascade_frontalface_default.xml to part-3 directory. Also, update the USB webcam video source as specified in [Part-2](../part-2/README.md#31-creating-dataset)
 
 ```shell
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
 $ sudo python facetrack.py
 ```
+The above script will track the known face using webcam mounted on Servo Pan/Tilt system. The servo position would get adjuested to center the known face.
+
+> Limitation: Webcam can only track the first known face at a time.
 
 [Link to Blog](http://www.96boards.org/blog/part-3-home-surveillance-project-96boards/)
 
