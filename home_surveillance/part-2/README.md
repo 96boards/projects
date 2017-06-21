@@ -102,7 +102,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE -DBUILD_EXAMPLES=OFF -DBUILD_opencv_apps=OFF
 
 > Note: Replace <opencv_contrib> with the path of the cloned *opencv_contrib* directory.
 
-Build OpenCV source with 2 threads. *-j n* decides the number of threads involved in building the source. Ideally, threads should be equal to number of cores availabe in SoC. Since, DragonBoard is quad core you can have *-j 4* but it may cause the CPU to overheat. So, limit to 2 inorder to avoid freeze during build.
+Next, build OpenCV with 2 threads. *-j n* decides the number of threads involved in building the source. Ideally, threads should be equal to number of cores availabe in SoC. Since, DragonBoard is quad core you can have *-j 4* but it may cause the CPU to overheat. So, limit to 2 inorder to avoid freeze during build.
 
 ```shell
 $ make -j 2
@@ -139,7 +139,7 @@ crw-rw----+ 1 root video 81, 1 Jun 20 18:58 /dev/video1
 crw-rw----+ 1 root video 81, 0 Jun 20 18:58 /dev/video0
 crw-rw----+ 1 root video 81, 2 Jun 21 03:15 /dev/video2
 ```
-Here, video2 has the latest modification time of 03:15. So, this should be the interface for USB wecam as it was connected after booting. Other two intrefaces are for video cards initialized during boot time. In this case, *cap = cv2.VideoCapture(0)* should be replaced with *cap = cv2.VideoCapture(2)* inside of all python scripts.
+Here, video2 has the latest modification time of 03:15. So, this should be the interface for USB wecam as it was connected after boot. Other two intrefaces are for video cards initialized during boot time. In this case, *cap = cv2.VideoCapture(0)* should be replaced with *cap = cv2.VideoCapture(2)* inside of all python scripts.
 
 ```shell
 $ sudo python dataset.py
@@ -166,7 +166,7 @@ $ sudo python facedetect.py
 ```
 This script makes use of the created trained model *trainer.yml* to implement facial recognition. Once the script has been executed, it will detect the faces infront of the camera and if any of the face matches with the created dataset, the corresponding name will be shown. Otherwise *unknown* will be shown.
 
-> Note: For changing the name of the detected person, replace "Mani" with the name of person inside *facedetect.py* script.
+> Note: For changing the name of detected person, replace "Mani" with the name of person inside *facedetect.py* script.
 > ```shell
 >              if(Id == 1):
 >                Id="Mani"
