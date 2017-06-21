@@ -70,7 +70,7 @@ Open facetrack.ino using Arduino IDE and upload the code to Sensor Mezzanine wit
 
 # 3) Project Execution
 
-Place the trained dataset and haarcascade_frontalface_default.xml to part-3 directory. Also, update the USB webcam video source as specified in [Part-2](../part-2/README.md#31-creating-dataset)
+Place the trained dataset and haarcascade_frontalface_default.xml created in [Part-2](../part-2) to current directory. Also, update the USB webcam video source as specified in [Part-2](../part-2/README.md#31-creating-dataset)
 
 ```shell
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
