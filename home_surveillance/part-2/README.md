@@ -86,13 +86,8 @@ $ git checkout 3.2.0
 ```
 ###### Turn ON SWAP partition:
 
-Use swapfile to prevent DragonBoard from running out of RAM
+Use swapfile to prevent DragonBoard from running out of RAM. Follow the instructions [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/CE-Extras/Configuration/SDSwapSpace.md) for allocating swap space in SD card.
 
-``` shell
-$ dd if=/dev/zero of=~/swapfile bs=1M count=512
-$ sudo mkswap ~/swapfile
-$ sudo swapon ~/swapfile
-```
 ###### Build the source:
 
 ``` shell
