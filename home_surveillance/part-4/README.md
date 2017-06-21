@@ -111,7 +111,7 @@ Clone the project repository
 $ git clone https://github.com/96boards/projects.git
 $ cd projects/home-surveillance/part-4
 ```
-Create a trained datastet by following the instructions in [Part-2](../part-2#3-project-execution). Then, copy the trained dataset and haarcascade_frontalface_default.xml to part-4 directory
+Place the trained dataset and haarcascade_frontalface_default.xml created in [Part-2](../part-2) to current directory. Also, update the USB webcam video source as specified in [Part-2](../part-2/README.md#31-creating-dataset)
 
 ``` shell
 $ cp -r ../part-2/trainer ../part-2/haarcascade_frontalface_default.xml ./
