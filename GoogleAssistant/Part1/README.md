@@ -2,14 +2,14 @@
 Part 1 provides a step by step guide in order to setup the board with the necessary hardware. Also, gives detailed instructions on how to create a project in Google Cloud Console, configure a developer project and manage the necessary account settings in order to have a functional Google Assistant application.
 
 ## Table of Contents
-- [1) Hardware]
-   - [1.1) Hardware requirements]
-   - [1.2) Hardware setup]
-- [2) Software] 
-   - [2.1) Operating System]
-   - [2.2) Requirements]
-- [3) Configure Developers project]
-- [4) Account settings]
+- [1) Hardware](#1-hardware)
+   - [1.1) Hardware requirements](#11-hardware-requirements)
+   - [1.2) Hardware setup](#12-hardware-setup)
+- [2) Software](#2-software) 
+   - [2.1) Operating System](#21-operating-system)
+   - [2.2) Requirements](#22-requirements)
+- [3) Configure Developers project](#3-configure-developers-project)
+- [4) Account settings](#4-account-settings)
 
 # 1) Hardware
 
