@@ -1,5 +1,5 @@
 # Google Assistant using 96Boards
-  The Google Assistant project aims at deploying Google Assistant on a DragonBoard 410c by 96Boards. Recently, Google released a software development kit (SDK) which allows third party developers to build their own Google Assistant on hardware of their choice. The SDK lets us add features such as hotword detection, voice control and natural language processing to devices of our choice. In this project we will make our own version of Google Assistant using a DragonBoard 410c, a USB mic and speakers.
+  The Google Assistant project aims at deploying Google Assistant on a DragonBoard410c by 96Boards. Recently, Google released a software development kit (SDK) which allows third party developers to build their own Google Assistant on hardware of their choice. The SDK lets us add features such as hotword detection, voice control and natural language processing to devices of our choice. In this project we will make our own version of Google Assistant using a DragonBoard 410c, a USB mic and speakers.
   
   By the end of this project you should be able to interface an external microphone as well as bluetooth speaker with the DragonBoard, create and configure a Google Developer Project on Google Cloud Platform (a developer project basically gives your device, a DragonBoard in this case, access to the Google Assistant API), use and understand gRPC bindings. 
 
@@ -15,7 +15,7 @@
    - [2.2) Requirements](#22-requirements)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
-- [5) 
+- [5) To do](#5-to-do)
 
 # 1) Hardware
 
@@ -59,6 +59,8 @@ Open the [Activity Controls Page](https://myaccount.google.com/activitycontrols)
 - Device Information
 - Voice and Audio Activity 
 
-
+# 5) To do
+- Software Dependencies
+- Integrating Assistant on DragonBoard.
 
 
