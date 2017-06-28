@@ -1,7 +1,12 @@
-# Part 1
-Part 1 provides a step by step guide in order to setup the board with the necessary hardware. Also, gives detailed instructions on how to create a project in Google Cloud Console, configure a developer project and manage the necessary account settings in order to have a functional Google Assistant application.
+# Google Assistant using 96Boards
+  The Google Assistant project aims at deploying Google Assistant on a DragonBoard410c by 96Boards. Recently, Google released a software development kit (SDK) which allows third party developers to build their own Google Assistant on hardware of their choice. The SDK lets us add features such as hotword detection, voice control and natural language processing to devices of our choice. In this project we will make our own version of Google Assistant using a DragonBoard 410c, a USB mic and speakers.
+  
+  By the end of this project you should be able to interface an external microphone as well as bluetooth speaker with the DragonBoard, create and configure a Google Developer Project on Google Cloud Platform (a developer project basically gives your device, a DragonBoard in this case, access to the Google Assistant API), use and understand gRPC bindings. 
 
-## Table of Contents
+## Why this project?
+  Google just released the SDK a few months ago so that the Assistant can be implemented on a wide range of platforms. So as 96Boards enthusiasts, it is essential that we test it out on one of the boards. It would be a great learning process and nothing beats the feeling of having a fully working project in your hands.
+
+# Table of Contents
 - [1) Hardware](#1-hardware)
    - [1.1) Hardware requirements](#11-hardware-requirements)
    - [1.2) Hardware setup](#12-hardware-setup)
@@ -10,6 +15,7 @@ Part 1 provides a step by step guide in order to setup the board with the necess
    - [2.2) Requirements](#22-requirements)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
+- [5) To do](#5-to-do)
 
 # 1) Hardware
 
@@ -52,4 +58,9 @@ Open the [Activity Controls Page](https://myaccount.google.com/activitycontrols)
 - Location History
 - Device Information
 - Voice and Audio Activity 
+
+# 5) To do
+- Software Dependencies
+- Integrating Assistant on DragonBoard.
+
 
