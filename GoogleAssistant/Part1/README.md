@@ -39,5 +39,16 @@ Part 1 provides a step by step guide in order to setup the board with the necess
 - For the first part of the project, we won't be installing any packages. All you will be needing is a Google Account. 
 
 # 3) Configure Developers project
+Follow these instructions in order to configure a Developer Project.
+
+- Go to the the [projects page](https://console.cloud.google.com/cloud-resource-manager) on Google Cloud Platform and create a new project.
+- In the [API manager page](https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview?project=dragon-assistant&duration=PT1H) search for the Google Assistant API and Enable it.
+- Now we will create an [OAuth Client ID](https://console.developers.google.com/apis/credentials/oauthclient?project=dragon-assistant&pli=1). Select ‘Others’ and provide a product name and proceed to save. After you click on create, it will generate a dialog box with the client ID and secret. Next to the clientID, click on the download button and save the .json file in working directory of the DragonBoard.
 
 # 4) Account Settings
+Open the [Activity Controls Page](https://myaccount.google.com/activitycontrols) and ensure that all of these switches are turned on. We will need each of these for the proper functioning of the project. 
+- Web and App Activity
+- Location History
+- Device Information
+- Voice and Audio Activity 
+
