@@ -31,7 +31,7 @@ If you would like to read more about this project, please visit [this blog](http
 ## 1.2 Hardware setup
 
 - DragonBoard 410 is powered off
-- Assemble Pan and Tilt servo by following the instructions [here](https://learn.adafruit.com/mini-pan-tilt-kit-            assembly/getting-started)
+- Assemble Pan and Tilt servo by following the instructions [here](https://learn.adafruit.com/mini-pan-tilt-kit-assembly/getting-started)
 - Mount USB webcam on servo assembly and connect to Sensors Mezzanine according to the following connections:
   - Pin 9   —-> Servo controlling X axis
   - Pin 10  —-> Servo controlling Y axis
