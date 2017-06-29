@@ -34,3 +34,10 @@ Set up AWS Cloud to stream the detected faces from dragonboard to S3 bucket.
 * [Link to Blog](http://www.96boards.org/blog/part-4-home-surveillance-project-96boards/)
 * [Link to Project](part-4)
 
+### Part 5 - Home Surveillance
+
+Final part of the Home Surveillance project. This part includes webcam tracking of known faces and alerting the user if a blacklisted faces has been identified. Also, remote streaming the webcam using Python's Flask micro server framework. This part glues previous parts together to create a working project.
+
+* [Link to Blog](http://www.96boards.org/blog/part-5-home-surveillance-project-96boards//)
+* [Link to Project](part-5)
+
