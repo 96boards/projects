@@ -13,7 +13,7 @@ This project is aimed at running the Retroarch game emulator on CE 96Boards.
    - [2.2) Package dependencies](#22-package-dependencies)
    - [2.3) Emulator Installation](#23-emulator-installation)
    - [2.4) Core Installation](#24-core-installation)
-- [3) Game Execution](#3-project-execution)
+- [3) Game Execution](#3-game-execution)
 
 ***
 
