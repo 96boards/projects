@@ -84,7 +84,7 @@ Now you should have received a confirmation email from AWS in the email id given
 ## 2.6 Create Notification for blacklisted faces
  
 1. Go to AWS S3 console, https://console.aws.amazon.com/s3/ 
-2. Select the bucket we’ve created in Part 4
+2. Select the bucket we’ve created in [Part 4](../part-4/README.md#24-create-s3-bucket)
 3. Goto Properties tab and select Events
 4. Click Add notification 
 5. Enter name for the notification and choose Put under Events
@@ -129,6 +129,4 @@ Now, if a known face is detected infront of webcam, following things will happen
 1. First instance of the face will get uploaded to AWS S3 bucket
 2. Webcam will track the known face
 3. User will get email notification if the trigger event is set for that particular face as mentioned [here](#26-create-notification-for-blacklisted-faces)
-4. Webcam ouput will get streamed 
-
-Go to router's public ip to see the live face tracking and recognition
+4. Webcam ouput will get streamed over the server. Go to router's public ip to see the live face tracking and recognition
