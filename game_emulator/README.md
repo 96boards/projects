@@ -51,7 +51,7 @@ libgl1-mesa-dev cmake build-essential git pkg-config ffmpeg libavdevice-dev
 
 Use swapfile to prevent DragonBoard from running out of RAM. Follow the instructions [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/CE-Extras/Configuration/SDSwapSpace.md) for allocating swap space in SD card.
 
-#### Clone Emulator source
+#### Clone the Emulator source
 
 ```shell
 $ git clone git://github.com/libretro/RetroArch.git
@@ -66,7 +66,9 @@ $ sudo make install
 ```
 ## 2.4 Core Installation
 
-#### Clone core source
+#### Clone the core source
+
+All of the supported cores for RetroArch is available [here](https://github.com/libretro/). You can use any of them. For instance, follow the below instructions to clone and build ***snes*** core.
 
 ```shell
 $ git clone https://github.com/libretro/snes9x2010.git
@@ -86,6 +88,4 @@ Run the Emulator with compiled core and ROM.
 ```shell
 retroarch -L snes9x2010_libretro.so <path_to_rom>
 ```
-> Note: Replace <path_to_rom> with the path of appropriate ROM
-
-
+> Note: Replace <path_to_rom> with the path of appropriate ROM. Instructions for downloading ROM is not provided here.
