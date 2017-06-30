@@ -17,7 +17,7 @@
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
 - [5) Integrating the assistant onto the DragonBoard](#5-integrating-the-assistant-onto-the-DragonBoard)
-
+- [6) Troubleshooting](#6-trobleshooting)
 # 1) Hardware
 
 ## 1.1 Hardware requirements
@@ -106,4 +106,17 @@ Finally, run the push to talk sample. The sample records a voice query after a k
 ```
 python -m pushtotalk
 ```
-`
+# 6) Troubleshooting
+This helps us do a simple speaker and microphone test, just to make sure that the hardware is functional. 
+```
+$ speaker-test -t wav
+$ arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw
+$ aplay --format=S16_LE --rate=16000 --file-type=raw out.raw
+```
+If there is an error that says a certain package is missing, check the path of the imported packages in the code and make sure they are in the right place. 
+
+Finally, if you are experiencing choppy audio or any discontinuities in the responses, these commands should help. They basically adjust the sound device’s block size.
+The appropriate size depends on the hardware so you may have to try more than one to get it right. For example 0,1024, 2048, 3200, 4096.
+```
+$ python pushtotalk.py --audio-block-size=0
+```
