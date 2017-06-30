@@ -16,7 +16,7 @@
    - [2.3) Software Dependencies](#23-software-dependencies)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
-- [5) Integrating Google Assistant onto DragonBoaord](#5-integrating-google-assistant-onto-dragonboard)
+- [5) Integrating Google Assistant onto DragonBoard](#5-integrating-google-assistant-onto-dragonboard)
 - [6) Troubleshooting](#6-troubleshooting)
 # 1) Hardware
 
@@ -83,7 +83,7 @@ Open the [Activity Controls Page](https://myaccount.google.com/activitycontrols)
 - Device Information
 - Voice and Audio Activity 
 
-# 5) Integrating Google Assistant onto DragonBoaord
+# 5) Integrating Google Assistant onto DragonBoard
 Google has provided a sample code which we will be using for our project. Run the following commands in order to clone the sample project repository and move the code into a new directory called new-project.
 ```
 $ git clone https://github.com/googlesamples/assistant-sdk-python
