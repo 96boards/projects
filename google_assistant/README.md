@@ -13,7 +13,7 @@
 - [2) Software](#2-software) 
    - [2.1) Operating System](#21-operating-system)
    - [2.2) Requirements](#22-requirements)
-   - [2.3) Software Dependencies] (#23-software-dependencies)
+   - [2.3) Software Dependencies](#23-software-dependencies)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
 - [5) To do](#5-to-do)
