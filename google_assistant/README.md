@@ -16,8 +16,8 @@
    - [2.3) Software Dependencies](#23-software-dependencies)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
-- [5) Integrating the assistant onto the DragonBoard](#5-integrating-the-assistant-onto-the-DragonBoard)
-- [6) Troubleshooting](#6-trobleshooting)
+- [5) Integrating Google Assistant onto DragonBoaord](#5-integrating-google-assistant-onto-DragonBoard)
+- [6) Troubleshooting](#6-troubleshooting)
 # 1) Hardware
 
 ## 1.1 Hardware requirements
