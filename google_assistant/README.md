@@ -16,7 +16,7 @@
    - [2.3) Software Dependencies](#23-software-dependencies)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
-- [5) To do](#5-to-do)
+- [5) Integrating the assistant onto the DragonBoard](#5-integrating-the-assistant-onto-the-DragonBoard)
 
 # 1) Hardware
 
@@ -60,7 +60,7 @@ $ source venv/bin/activate
 $ python -m pip install --upgrade pip
 $ python -m pip install --upgrade pip setuptools
 ```
-gRPC is a modern open source high performance RPC framework that can run in any environment. This framework is supports bidirectional audio streaming. You can find more documentation on gRPC here.
+gRPC is a modern open source high performance RPC framework that can run in any environment. This framework is supports bidirectional audio streaming. You can find more documentation on gRPC [here](http://www.grpc.io/docs/).
 ```
 $ python -m pip install grpcio
 $ python -m pip install grpcio-tools
@@ -83,8 +83,27 @@ Open the [Activity Controls Page](https://myaccount.google.com/activitycontrols)
 - Device Information
 - Voice and Audio Activity 
 
-# 5) To do
-- Software Dependencies
-- Integrating Assistant on DragonBoard.
-
-
+# 5) Integrating Google Assistant onto DragonBoaord
+Google has provided a sample code which we will be using for our project. Run the following commands in order to clone the sample project repository and move the code into a new directory called new-project.
+```
+$ git clone https://github.com/googlesamples/assistant-sdk-python
+$ cp -r assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc new-project
+$ cd new-project
+```
+To proceed, we need to authorize our device to talk to the Google Assistant using the Google Account. The Assistant SDK uses OAuth 2.0 access tokens to authorize your device to connect with the Assistant. First, we install the authorization tool. Then run the tool using the json file that was downloaded earlier. Make sure the path to the json file is correct.
+```
+$ pip install --upgrade google-auth-oauthlib[tool]
+$ google-oauthlib-tool --client-secrets path/to/client_secret_XXXXX.json --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless
+Install the final two dependencies.
+$ sudo apt-get install portaudio19-dev libffi-dev libssl-dev
+$ pip install --upgrade -r requirements.txt
+```
+The directory contains a python file called audio_helpers.py. The code basically records an audio clip for five seconds and plays it back. 
+```
+$ python audio_helpers.py
+```
+Finally, run the push to talk sample. The sample records a voice query after a keypress and plays back the Google Assistant's answer:
+```
+python -m pushtotalk
+```
+`
