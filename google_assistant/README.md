@@ -13,6 +13,7 @@
 - [2) Software](#2-software) 
    - [2.1) Operating System](#21-operating-system)
    - [2.2) Requirements](#22-requirements)
+   - [2.3) Software Dependencies] (#23-software-dependencies)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
 - [5) To do](#5-to-do)
@@ -43,6 +44,29 @@
 
 ## 2.2 Requirements
 - For the first part of the project, we won't be installing any packages. All you will be needing is a Google Account. 
+
+## 2.3 Software Dependencies
+First, we will begin with updating the already available packages and install the newer versions of packages we have. Run the following commands to do the same.
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+```
+The reference code provided by Google is written in Python, so install the latest version of Python. PIP is basically a package manager which is used to install packages that are written in Python. A virtual environment allows creation of isolated environments to download dependencies that are required for a project.
+```
+$ sudo apt-get install python3
+$ python -m pip install virtualenv
+$ virtualenv venv
+$ source venv/bin/activate
+$ python -m pip install --upgrade pip
+$ python -m pip install --upgrade pip setuptools
+```
+gRPC is a modern open source high performance RPC framework that can run in any environment. This framework is supports bidirectional audio streaming. You can find more documentation on gRPC here.
+```
+$ python -m pip install grpcio
+$ python -m pip install grpcio-tools
+```
+So these are all the packages we will be using for this application. Now let’s take a look at the final step which allows us to implement the application onto the DragonBoard.
+
 
 # 3) Configure Developers project
 Follow these instructions in order to configure a Developer Project.
