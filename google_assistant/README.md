@@ -13,10 +13,11 @@
 - [2) Software](#2-software) 
    - [2.1) Operating System](#21-operating-system)
    - [2.2) Requirements](#22-requirements)
+   - [2.3) Software Dependencies](#23-software-dependencies)
 - [3) Configure Developers project](#3-configure-developers-project)
 - [4) Account settings](#4-account-settings)
-- [5) To do](#5-to-do)
-
+- [5) Integrating Google Assistant onto DragonBoard](#5-integrating-google-assistant-onto-dragonboard)
+- [6) Troubleshooting](#6-troubleshooting)
 # 1) Hardware
 
 ## 1.1 Hardware requirements
@@ -44,6 +45,29 @@
 ## 2.2 Requirements
 - For the first part of the project, we won't be installing any packages. All you will be needing is a Google Account. 
 
+## 2.3 Software Dependencies
+First, we will begin with updating the already available packages and install the newer versions of packages we have. Run the following commands to do the same.
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+```
+The reference code provided by Google is written in Python, so install the latest version of Python. PIP is basically a package manager which is used to install packages that are written in Python. A virtual environment allows creation of isolated environments to download dependencies that are required for a project.
+```
+$ sudo apt-get install python3
+$ python -m pip install virtualenv
+$ virtualenv venv
+$ source venv/bin/activate
+$ python -m pip install --upgrade pip
+$ python -m pip install --upgrade pip setuptools
+```
+gRPC is a modern open source high performance RPC framework that can run in any environment. This framework is supports bidirectional audio streaming. You can find more documentation on gRPC [here](http://www.grpc.io/docs/).
+```
+$ python -m pip install grpcio
+$ python -m pip install grpcio-tools
+```
+So these are all the packages we will be using for this application. Now let’s take a look at the final step which allows us to implement the application onto the DragonBoard.
+
+
 # 3) Configure Developers project
 Follow these instructions in order to configure a Developer Project.
 
@@ -59,8 +83,40 @@ Open the [Activity Controls Page](https://myaccount.google.com/activitycontrols)
 - Device Information
 - Voice and Audio Activity 
 
-# 5) To do
-- Software Dependencies
-- Integrating Assistant on DragonBoard.
+# 5) Integrating Google Assistant onto DragonBoard
+Google has provided a sample code which we will be using for our project. Run the following commands in order to clone the sample project repository and move the code into a new directory called new-project.
+```
+$ git clone https://github.com/googlesamples/assistant-sdk-python
+$ cp -r assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/grpc new-project
+$ cd new-project
+```
+To proceed, we need to authorize our device to talk to the Google Assistant using the Google Account. The Assistant SDK uses OAuth 2.0 access tokens to authorize your device to connect with the Assistant. First, we install the authorization tool. Then run the tool using the json file that was downloaded earlier. Make sure the path to the json file is correct.
+```
+$ pip install --upgrade google-auth-oauthlib[tool]
+$ google-oauthlib-tool --client-secrets path/to/client_secret_XXXXX.json --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless
+Install the final two dependencies.
+$ sudo apt-get install portaudio19-dev libffi-dev libssl-dev
+$ pip install --upgrade -r requirements.txt
+```
+The directory contains a python file called audio_helpers.py. The code basically records an audio clip for five seconds and plays it back. 
+```
+$ python audio_helpers.py
+```
+Finally, run the push to talk sample. The sample records a voice query after a keypress and plays back the Google Assistant's answer:
+```
+python -m pushtotalk
+```
+# 6) Troubleshooting
+This helps us do a simple speaker and microphone test, just to make sure that the hardware is functional. 
+```
+$ speaker-test -t wav
+$ arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw
+$ aplay --format=S16_LE --rate=16000 --file-type=raw out.raw
+```
+If there is an error that says a certain package is missing, check the path of the imported packages in the code and make sure they are in the right place. 
 
-
+Finally, if you are experiencing choppy audio or any discontinuities in the responses, these commands should help. They basically adjust the sound device’s block size.
+The appropriate size depends on the hardware so you may have to try more than one to get it right. For example 0,1024, 2048, 3200, 4096.
+```
+$ python pushtotalk.py --audio-block-size=0
+```
