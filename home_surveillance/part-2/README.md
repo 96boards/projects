@@ -144,10 +144,12 @@ Here, video2 has the latest modification time of 03:15. So, this should be the i
 ```shell
 $ sudo python dataset.py
 ```
-Script will prompt to enter user ID. Type 1 and press Enter. If multiple faces needs to be detected, it should be
-executed multiple times with different user ID's (2,3,4 etc...).
+Script will prompt the user to enter the users Name. Type Your name and press Enter. If multiple faces needs to be detected, it should be executed multiple times. The script will mantain the User's Id Vs Name in a CSV file "file.txt"
+Everytime the user runs dataset.py, it updates file.txt, captures 30 instances of the face infront of camera and stores inside *dataset* directory. Both dataset.py and facedetect.py read from this file.txt csv file and use it as a look up to display the users name on the detected face.
 
-This script captures 30 instances of the face infront of camera and stores inside *dataset* directory.
+For the sake of convineance, dataset.py also updates the training dataset seen in #3.2 below.
+This way the user does not have to train the face detection every time they update the dataset. 
+For educative purpose, the training script (trainer.py in ##3.2 below) is also seperately included to make the distinction between capturing the data using face detection and training the dataset to realize face recognition. 
 
 ## 3.2 Training dataset
 
@@ -165,10 +167,3 @@ This script will create *trainer.yml* file inside *trainer* directory and will b
 $ sudo python facedetect.py
 ```
 This script makes use of the created trained model *trainer.yml* to implement facial recognition. Once the script has been executed, it will detect the faces infront of the camera and if any of the face matches with the created dataset, the corresponding name will be shown. Otherwise *unknown* will be shown.
-
-> Note: For changing the name of detected person, replace "Mani" with the name of person inside *facedetect.py* script.
-> ```shell
->              if(Id == 1):
->                Id="Mani"
-> ```
-> For recognizing multiple faces, populate the *else if* part with appropriate ID and name as shown above.
