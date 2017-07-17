@@ -117,16 +117,26 @@ $ cd RetroPie-Setup
 This script will install emulation station, RetroArch and few cores.
 
 ```shell
-$ sudo ./retropie_setup
+$ sudo su
+```
+> Note: It is mandatory to switch to root user before executing the following command. **sudo** won't work here.
+
+```shell
+# ./retropie_setup
 ```
 
 Select **yes** to Copyright agreement and select **Basic install** from the opened dialog. After the installation has finished successfully, exit the dialog.
 
 ## 4.2 Game Execution
 
-Place the downloaded ROMs into the appropriate core directory under ***/home/linaro/RetroPie/roms/***.
+Place the downloaded ROMs into the appropriate core directory under ***/home/linaro/RetroPie/roms/***
 
 Execute the following command and configure the keypad then select games by choosing the emulator in main window.
+
+```shell
+# exit
+```
+Above command switches back to linaro user.
 
 ```shell
 $ emulationstation
