@@ -12,11 +12,11 @@ controlling the DC motor will be offloaded to Arduino present on Sensors Mezzani
    - [1.2) Hardware setup](#12-hardware-setup)
 - [2) Software](#2-software) 
    - [2.1) Operating System](#21-operating-system)
-   - [2.2) Software Dependencies](#23-software-dependencies)
+   - [2.2) Software Dependencies](#22-software-dependencies)
 - [3) Measuring tilt using IMU](#3-measuring-tilt-using-imu)
-- [4) Implementing PID controller](#4-impementing-pid-controller)
-- [5) Controlling DC motors using Sensors Mezzanine](#5-controlling-dc-motors)
-- [6) Establishing Bluetooth communication to CE board](#6-establishing-ble-communication-to-ce-board)
+- [4) Implementing PID controller](#4-implementing-pid-controller)
+- [5) Controlling DC motors using Sensors Mezzanine](#5-controlling-dc-motors-using-sensors-mezzanine)
+- [6) Establishing Bluetooth communication to CE board](#6-establishing-bluetooth-communication-to-ce-board)
 - [7) Self Balancing Bot in action](#7-self-balancing-bot-in-action)
 
 # 1) Hardware
