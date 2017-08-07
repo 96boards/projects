@@ -16,7 +16,7 @@ Now, I executed this entire project on the Arduino toolchain. If you don't have 
 ## Instructions:
 
 ### Hardware Setup:
-Initially, make sure that the DragonBoard 410c is unplugged (powered off). Conect the Sensors Mezzanine to DragonBoard 410c through the 40 pin low-speed expansion connector. Mezzanine board (male pins) will match 1-to-1 with female pins on DragonBoard 410c connector. Make sure all 40 pins are lined up properly before moving to next step. Then connect the sensors as follows:
+Initially, make sure that the DragonBoard 410c is unplugged (powered off). Conect the Sensors Mezzanine to DragonBoard 410c through the 40 pin low-speed expansion connector. Mezzanine board (male pins) will match 1-to-1 with female pins on DragonBoard 410c connector. Make sure all 40 pins are lined up properly before moving to next step. Then connect the sensors using Grove Universal 4 pin Connectors as follows:
  - A0 --> Light Sensor
  - A1 --> Temperature Sebsor
  - A2 --> Sound Sensor
