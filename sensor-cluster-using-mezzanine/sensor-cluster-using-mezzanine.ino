@@ -5,9 +5,9 @@
  * All rights reserved.
  ********************************
  * 
- * A0 --> Light
- * A1 --> Temperature
- * A2 --> Sound
+ * A0 --> Light Sensor
+ * A1 --> Temperature Sensor
+ * A2 --> Sound Sensor
  * D4 --> Touch Sensor Module
  * D5 --> Button
  * D6 --> Rotary Angle Sensor
