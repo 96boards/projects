@@ -58,3 +58,9 @@ $ sudo python visualize.py
 # 4. Conclusion:
 
 Sensor can be moved about X and Y axes so that the tile on display also moves accordingly. Simply close the pygame window to exit both processes gracefully.
+
+Before running the binary again, delete */tmp/socket* as below:
+
+```shell
+$ sudo rm -rf /tmp/socket
+```
