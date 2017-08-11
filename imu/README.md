@@ -1,7 +1,7 @@
 # IMU-MPU6050 interfacing
 
-This project shows how to interface 6 DoF IMU (Intertial Measurement Unit) with 96Boards. Sensor value will be read by a C program and passed to a Python script which does 
-3D rendering with the help of OpenGL and pygame. This allows us to visualize the rotation about X and Y axes graphically. Unix socket is used for 
+This project shows how to interface **6 DoF IMU** (Intertial Measurement Unit) with 96Boards. Sensor value will be read by a C program and passed to a Python script which does 
+3D rendering with the help of **OpenGL** and **pygame**. This allows us to visualize the rotation about X and Y axes graphically. Unix socket is used for 
 IPC (Inter Process Communication) between C and Python processes.
 
 # Table of Contents
@@ -21,12 +21,11 @@ IPC (Inter Process Communication) between C and Python processes.
 1. [DragonBoard 410c](http://www.96boards.org/product/dragonboard410c/)
 2. [Power Supply](https://www.amazon.com/Adapter-Regulated-Supply-Copper-String/dp/B015G8DZK2)
 2. [Sensors Mezzanine](http://www.96boards.org/product/sensors-mezzanine/)
-3. [Micro USB Cable](https://www.amazon.com/AmazonBasics-USB-Male-Micro-Cable/dp/B01EK87A82/ref=sr_1_3?ie=UTF8&qid=1497618343&sr=8-3&keywords=micro%2Busb&th=1)
-4. [MPU6050 IMU](https://www.tindie.com/products/onehorse/gy-521-mpu-6050-breakout-board/)
+3. [MPU6050 IMU](https://www.tindie.com/products/onehorse/gy-521-mpu-6050-breakout-board/)
 
 ## 1.2 Hardware Setup:
 
-First, connect the Sensors Mezzanine board onto the DragonBoard via the low-speed expansion connector. Then, connect MPU6050 to I2C0 of Sensors Mezzanine.
+First, connect the Sensors Mezzanine to DragonBoard410c via low-speed expansion connector. Then, connect **MPU6050** to **I2C0** of Sensors Mezzanine.
 
 # 2. Software
 
@@ -35,7 +34,6 @@ First, connect the Sensors Mezzanine board onto the DragonBoard via the low-spee
 - [Linaro Debian based OS (latest)](https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/Downloads/Debian.md)
 
 ## 2.2 Package Dependencies
-UPM Library
 ```
 $ sudo apt-get install libmraa-dev python-opengl python-pygame
 ```
