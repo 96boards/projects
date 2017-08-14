@@ -13,6 +13,7 @@ IPC (Inter Process Communication) between C and Python processes.
    - [2.2) Package Dependencies](#22-package-dependencies)
 - [3) Building and running](#3-building-and-running)
 - [4) Conclusion](#4-conclusion)
+- [5) Video](#5-video)
 
 # 1. Hardware
 
@@ -64,3 +65,6 @@ Before running the binary again, delete */tmp/socket* as below:
 ```shell
 $ sudo rm -rf /tmp/socket
 ```
+# 5. Video
+
+[Demonstration video](https://www.youtube.com/watch?v=wZar5iLry3w)
