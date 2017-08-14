@@ -53,9 +53,7 @@ controlling the DC motor will be offloaded to Arduino present on Sensors Mezzani
 $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
-# 3) Measuring tilt using IMU
-
-Coming soon...
+# 3) [Measuring tilt using IMU](../imu)
 
 # 4) Implementing PID controller
 
