@@ -17,15 +17,13 @@ Bugs are tracked through [GitHub issues](https://guides.github.com/features/issu
 
 ### Contribution
 
-Community contributions are always Welcome! Before contributing a project, please take a look at the [Contributing](http://www.96boards.org/project/new/) section of 96Boards website. If you still think that this is the place where
-your project should be hosted, first get the approval from 96Boards team by raising a [GitHub issue](https://guides.github.com/features/issues/) using the following guidelines.
+Community contributions are always Welcome! Before contributing a project, please take a look at the [FAQ](https://github.com/96boards/website/blob/master/_projects/faq.md) of 96Boards website. If you still think that this is the place where your project should be hosted, first get the approval from 96Boards team by raising a [GitHub issue](https://github.com/96boards/projects/issues) using the following guidelines.
 
 * **Use a clear and crispy title** for your project.
 * **Provide a detailed description** for your project.
 * **Justify the showcasing of 96Boards functionalities** in your project
 
-After getting approval from one of the members of 96Boards team, project should be submitted as a pull request containing
-the source code and README.md with following details:
+After getting approval from one of the members of 96Boards team, project should be submitted as a [Pull Request](https://github.com/96boards/projects/pull/new/master) containing the source code and README.md with following details:
 
 * Introduction
 * Hardware requirements
