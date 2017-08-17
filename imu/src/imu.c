@@ -52,16 +52,13 @@
 /* gyroscope scale factor for (+/-)250/s */
 #define MPU6050_GYRO_SCALE 131.0
 
+volatile sig_atomic_t flag = 1;
 int socket_fd, conn_fd, ret;
 struct sockaddr_un address;
 
 void sig_handler(int signum)
 {
-	if (signum == SIGTERM) {
-		close(conn_fd);
-		close(socket_fd);
-		unlink(address.sun_path);
-	}
+	flag = 0;
 }
 
 float dist(int16_t a, int16_t b)
@@ -202,7 +199,7 @@ int main(void)
 	/* wait until connection with client (blocking) */
 	while((conn_fd = accept(socket_fd, (struct sockaddr *)&address, &addr_len)) <= -1);
 
-	while(1) {
+	while(flag) {
 		/* read raw accel data */
 		accel_data[0] = i2c_read_word(i2c, MPU6050_REG_RAW_ACCEL_X) / MPU6050_ACCEL_SCALE;
 		accel_data[1] = i2c_read_word(i2c, MPU6050_REG_RAW_ACCEL_Y) / MPU6050_ACCEL_SCALE;
@@ -247,6 +244,11 @@ int main(void)
 		usleep(20000);
 	}
 
+	close(conn_fd);
+	close(socket_fd);
+	unlink(address.sun_path);
+	
+	return 0;
 err_exit:
         close(conn_fd);
         close(socket_fd);
