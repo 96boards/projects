@@ -36,6 +36,8 @@ First, connect the Sensors Mezzanine to DragonBoard410c via low-speed expansion 
 
 ## 2.2 Package Dependencies
 ```
+$ sudo apt-get update
+$ sudo apt-get upgrade
 $ sudo apt-get install libmraa-dev python-opengl python-pygame
 ```
 
