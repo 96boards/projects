@@ -1,6 +1,6 @@
 # Game Emulator
 
-This project is aimed at running the Retroarch game emulator on CE 96Boards.
+This project is aimed at running different game emulators on CE 96Boards.
 
 
 # Table of Contents
@@ -11,9 +11,13 @@ This project is aimed at running the Retroarch game emulator on CE 96Boards.
 - [2) Software](#2-software)   
    - [2.1) Operating System](#21-operating-system)
    - [2.2) Package dependencies](#22-package-dependencies)
-   - [2.3) Emulator Installation](#23-emulator-installation)
-   - [2.4) Core Installation](#24-core-installation)
-- [3) Game Execution](#3-game-execution)
+- [3) RetroArch](#3-retroarch)
+   - [3.1) Emulator Installation](#31-emulator-installation)
+   - [3.2) Core Installation](#32-core-installation)
+   - [3.2) Game Execution](#33-game-execution)
+- [4) RetroPie](#4-retropie)
+   - [4.1) Installation](#41-installation)
+
 
 ***
 
@@ -41,15 +45,21 @@ This project is aimed at running the Retroarch game emulator on CE 96Boards.
 ```shell
 $ sudo apt-get update
 $ sudo apt-get dist-upgrade
+
+> Note: HiKey: Some packages might get corrupted by this, so run the following commmand to resolve.
+$ sudo apt-get -f install
+
 $ sudo apt-get install -y libsdl1.2-dev libsdl2-dev libboost-system-dev libboost-filesystem-dev \
 libboost-date-time-dev libfreeimage-dev libfreetype6-dev libeigen3-dev libcurl4-openssl-dev libasound2-dev \
 libgl1-mesa-dev cmake build-essential git pkg-config ffmpeg libavdevice-dev
 ```
-## 2.3 Emulator Installation
+# 3) RetroArch
 
 #### Turn ON SWAP partition:
 
 Use swapfile to prevent DragonBoard from running out of RAM. Follow the instructions [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/CE-Extras/Configuration/SDSwapSpace.md) for allocating swap space in SD card.
+
+## 3.1 Emulator Installation
 
 #### Clone the Emulator source
 
@@ -64,7 +74,7 @@ $ ./configure
 $ make -j 2
 $ sudo make install
 ```
-## 2.4 Core Installation
+## 3.2 Core Installation
 
 #### Clone the core source
 
@@ -81,7 +91,7 @@ $ make -f Makefile.libretro
 ```
 After building, the core ***snes9x2010_libretro.so*** will get generated
 
-# 3) Game Execution
+## 3.3 Game Execution
 
 Run the Emulator with compiled core and ROM.
 
@@ -89,3 +99,47 @@ Run the Emulator with compiled core and ROM.
 retroarch -L snes9x2010_libretro.so <path_to_rom>
 ```
 > Note: Replace <path_to_rom> with the path of appropriate ROM. Instructions for downloading ROM is not provided here.
+
+# 4) RetroPie
+
+## 4.1 Installation
+
+#### Clone the source
+
+```shell
+$ git clone -b 96Boards https://github.com/Mani-Sadhasivam/RetroPie-Setup.git
+```
+#### Building the source
+
+```shell
+$ cd RetroPie-Setup
+```
+This script will install emulation station, RetroArch and few cores.
+
+```shell
+$ sudo su
+```
+> Note: It is mandatory to switch to root user before executing the following command. **sudo** won't work here.
+
+```shell
+# ./retropie_setup.sh
+```
+
+Select **yes** to Copyright agreement and select **Basic install** from the opened dialog. After the installation has finished successfully, exit the dialog.
+
+## 4.2 Game Execution
+
+Place the downloaded ROMs into the appropriate core directory under ***/home/linaro/RetroPie/roms/***
+
+Execute the following command and configure the keypad then select games by choosing the emulator in main window.
+
+```shell
+# exit
+```
+Above command switches back to linaro user.
+
+```shell
+$ emulationstation
+```
+
+For more info please visit the official RetroPie Wiki [here](https://github.com/retropie/retropie-setup/wiki/First-Installation)
