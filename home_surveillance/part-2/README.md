@@ -126,7 +126,8 @@ $ cd projects/home_surveillance/part-2
 ```shell
 $ mkdir dataset
 ```
-*dataset.py* script assumes /dev/video0 as the source for USB webcam. It could be different on each board. For finding the correct video source, execute the following command:
+*dataset.py* script tries to auto detect the source for USB webcam. It could be different on each board. 
+For finding the correct video source, the script sends the following command to the operating system:
 
 ```shell
 $ ls -lrt /dev/video*
@@ -139,7 +140,9 @@ crw-rw----+ 1 root video 81, 1 Jun 20 18:58 /dev/video1
 crw-rw----+ 1 root video 81, 0 Jun 20 18:58 /dev/video0
 crw-rw----+ 1 root video 81, 2 Jun 21 03:15 /dev/video2
 ```
-Here, video2 has the latest modification time of 03:15. So, this should be the interface for USB wecam as it was connected after boot. Other two intrefaces are for video cards initialized during boot time. In this case, *cap = cv2.VideoCapture(0)* should be replaced with *cap = cv2.VideoCapture(2)* inside of all python scripts.
+Here, video2 has the latest modification time of 03:15. So, this should be the interface for USB wecam as it was connected after boot. Other two intrefaces are for video cards initialized during boot time. In this case, the script will parse through the response lines and assign 2 to the variable "camNO".
+
+If there are any errors related to the script not being able to identify the Webcam, simply unplug the webcam and connect it back to the USB and re-launch the following script.
 
 ```shell
 $ sudo python dataset.py
