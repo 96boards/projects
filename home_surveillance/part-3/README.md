@@ -35,9 +35,10 @@ If you would like to read more about this project, please visit [this blog](http
 - Mount USB webcam on servo assembly and connect to Sensors Mezzanine according to the following connections:
   - Pin 9   —-> Servo controlling X axis
   - Pin 10  —-> Servo controlling Y axis
-  - 5v      —-> Servo Vcc
+  - 5v (VIO)      —-> Servo Vcc
   - Gnd     —-> Servo Gnd
-
+  ![Connections](https://github.com/OlllllllO/projects/blob/master/home_surveillance/part-3/Home-Surveillance-part3-connections.jpg)
+  ![Setup](https://github.com/OlllllllO/projects/blob/master/home_surveillance/part-3/Home-Surveillance-setup.jpg)
 - Connect Sensors Mezzanine
 - Connect USB webcam 
 - Connect I/O devices (Monitor, Keyboard, etc...)
@@ -78,7 +79,8 @@ $ sudo python facetrack.py
 ```
 The above script will track the known face using webcam mounted on Servo Pan/Tilt system. The servo system will adjust it's position continuously to center the known face.
 
-> Limitation: Webcam can only track the first known face at a time.
+Script will prompt the user to enter the Name of the person that needs to be tracked. 
+Type the name and press Enter.
 
 [Link to Blog](http://www.96boards.org/blog/part-3-home-surveillance-project-96boards/)
 
