@@ -129,11 +129,6 @@ Place the downloaded ROMs into the appropriate core directory under ***/home/lin
 Execute the following command and configure the keypad then select games by choosing the emulator in main window.
 
 ```shell
-# exit
-```
-Above command switches back to linaro user.
-
-```shell
 $ emulationstation
 ```
 
