@@ -57,7 +57,7 @@ libgl1-mesa-dev cmake build-essential git pkg-config ffmpeg libavdevice-dev
 
 #### Turn ON SWAP partition:
 
-Use swapfile to prevent DragonBoard from running out of RAM. Follow the instructions [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/CE-Extras/Configuration/SDSwapSpace.md) for allocating swap space in SD card.
+Use swapfile to prevent DragonBoard from running out of RAM. Follow the instructions [here](https://github.com/96boards/documentation/blob/master/ConsumerEdition/guides/sd_swapspace.md) for allocating swap space in SD card.
 
 ## 3.1 Emulator Installation
 
