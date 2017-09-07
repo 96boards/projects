@@ -117,12 +117,7 @@ $ cd RetroPie-Setup
 This script will install emulation station, RetroArch and few cores.
 
 ```shell
-$ sudo su
-```
-> Note: It is mandatory to switch to root user before executing the following command. **sudo** won't work here.
-
-```shell
-# ./retropie_setup.sh
+$ sudo ./retropie_setup.sh
 ```
 
 Select **yes** to Copyright agreement and select **Basic install** from the opened dialog. After the installation has finished successfully, exit the dialog.
