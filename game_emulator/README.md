@@ -107,7 +107,7 @@ retroarch -L snes9x2010_libretro.so <path_to_rom>
 #### Clone the source
 
 ```shell
-$ git clone -b 96Boards https://github.com/Mani-Sadhasivam/RetroPie-Setup.git
+$ git clone -b 96boards https://github.com/Mani-Sadhasivam/RetroPie-Setup.git
 ```
 #### Building the source
 
