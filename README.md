@@ -1,15 +1,23 @@
 # 96Boards Projects
 
-Welcome to the official projects repository of 96Boards. This repository consists of project contributions from 96Boards team and the community.
+Welcome to the staging area of 96Boards projects. This repository is used by
+the community to submit their projects into [96Boards Projects](https://github.com/96boards-projects)
+ecosystem.
 
-## Getting started
+## What is Staging area?
 
-Projects hosted here are made out of _CE, EE, and IE_ boards of 96Boards family. To know more about 96Boards, please visit
-(http://www.96boards.org/)
+Staging area is the place where the community submit their projects for review. Once it
+gets reviewed by the 96Boards team, project will get migrated into mainline
+[96Boards Projects](https://github.com/96boards-projects) repository. From there
+on the author who contributed the project will be granted full access to their repo.
 
-## Contributing
+## How can I submit the project?
 
-See the [Contributing](CONTRIBUTE.md) guide for more details.
+Please refer the [Contributing](CONTRIBUTE.md) guide for submission guidelines.
+
+## Want to know more?
+
+Please see [FAQ](FAQ.md).
 
 ## License
 
